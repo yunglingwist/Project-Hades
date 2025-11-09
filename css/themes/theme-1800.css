@@ -8,7 +8,7 @@
   --accent:#ECD0BB;    
 
   /* map image for this theme */
-  --background-map: url('../images/GameMap.jpg'); /* Koyu temaya uygun varsayılan bir harita */
+  --background-map: url('../images/Map2.jpg'); /* Koyu temaya uygun varsayılan bir harita */
 
   /* typography */
   --font-text: "Abril Fatface", "Times New Roman", ui-serif, serif; 

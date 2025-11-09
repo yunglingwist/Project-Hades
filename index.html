@@ -33,6 +33,7 @@
       </div>
     </div>
   </header>
+
   <!-- Hero -->
   <main>
     <section class="hero container">
@@ -46,13 +47,12 @@
       <div class="hero-media">
         <div class="hero-art">
           <div class="frame">
-        <img src="images/PortraitZagreus.webp" alt="Zagreus Portrait" />
+            <img src="images/PortraitZagreus.webp" alt="Zagreus Portrait" />
           </div>
         </div>
         <div class="hero-quote"></div>
         <p class="quote"><em>"Death is not the end, it's a new beginning."</em>
         <span style="display: inline-block; margin-left: 8px;">-Zagreus</span></p>
-      </div></div>
       </div>
     </section>
 
@@ -61,11 +61,7 @@
       <div class="carousel">
         <button class="chev left" aria-label="Previous">‹</button>
         <div class="track" id="track">
-          <article class="card"></article>
-          <article class="card"></article>
-          <article class="card"></article>
-          <article class="card"></article>
-          <article class="card"></article>
+          <!-- Cards will be generated dynamically -->
         </div>
         <button class="chev right" aria-label="Next">›</button>
       </div>
@@ -77,14 +73,65 @@
     <div class="container">© Project HADES</div>
   </footer>
 
+  <!-- Featured Items + Carousel -->
   <script>
-    // Carousel
+    // 1) Items to display
+    const FEATURED_ITEMS = [
+      {
+        id: 'stygian-blade',
+        title: 'Stygian Blade',
+        img: 'images/ItemBlade.webp',
+        link: 'item.html?id=stygian-blade'
+      },
+      {
+        id: 'ambrosia',
+        title: 'Ambrosia',
+        img: 'images/ItemAmbrosia.webp',
+        link: 'item.html?id=ambrosia'
+      },
+      {
+        id: 'chariot',
+        title: 'Etruscan Chariot',
+        img: 'images/ItemChariot.webp',
+        link: 'item.html?id=chariot'
+      },
+      {
+        id: 'vase',
+        title: 'Apulian Hydria',
+        img: 'images/ItemVase.png',
+        link: 'item.html?id=vase'
+      },
+      {
+        id: 'obol-coin',
+        title: 'Obol Coin',
+        img: 'images/ItemObol.webp',
+        link: 'item.html?id=obol-coin'
+      }
+    ];
+
+    // 2) Populate the carousel
     const track = document.getElementById('track');
+    track.innerHTML = '';
+
+    FEATURED_ITEMS.forEach(item => {
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.innerHTML = `
+        <a href="${item.link}" class="card-body">
+          <img src="${item.img}" alt="${item.title}" class="card-img" />
+          <h3 class="card-title">${item.title}</h3>
+        </a>
+      `;
+      track.appendChild(card);
+    });
+
+    // 3) Carousel scroll
     const step = () => Math.min(track.clientWidth, 360);
     document.querySelector('.chev.left').onclick  = () => track.scrollBy({left:-step(),behavior:'smooth'});
     document.querySelector('.chev.right').onclick = () => track.scrollBy({left: step(),behavior:'smooth'});
   </script>
-  
-<script src="js/theme-switcher.js"></script>
+
+  <!-- Theme Switcher -->
+  <script src="js/theme-switcher.js"></script>
 </body>
 </html>
