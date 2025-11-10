@@ -7,6 +7,7 @@
   <!-- Base + Theme -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/style-map.css">
+  <link rel="stylesheet" href="css/style-popup.css">
   <link id="theme-css" rel="stylesheet" href="css/themes/theme-1990-2010.css" />
 </head>
 <body>
@@ -29,7 +30,7 @@
           <option value="1800s">1800s</option>
           <option value="1900-1950">1900–1950</option>
           <option value="1950-1990">1950–1990</option>
-          <option value="1990-2010">1990–2010</option>
+          <option value="1990-2010" selected>1990–2010</option>
           <option value="2035">2035</option>
         </select>
       </div>
@@ -41,139 +42,195 @@
 
     <section class="map-stage">
       <div class="map-wrap">
+        <!-- harita temadan geliyor -->
         <div id="map" role="img" aria-label="Hades exhibition map"></div>
-        <!-- ✨ SEVİYE ETİKETLERİ -->
+        <!-- marker’lar buraya -->
         <div id="markers" aria-label="Exhibition hotspots"></div>
       </div>
     </section>
   </main>
-    <div class="background-overlay">
-          <div class="form-container">
-              <div class="form-header">
-                  <h1 class="item-name-title"></h1>
-                  <span class="close-button">&times;</span>
-              </div>
-              
-              <div class="content-section">
-                  <div id="real-img" class="image-placeholder large"></div>
-                  <div id="game-img" class="image-placeholder large"></div>
-              </div>
 
-              <div class="content-section info-row">
-                  <div class="info-box small">
-                      <label>ID</label>
-                      <p id="id" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Title</label>
-                      <p id="title" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Type</label>
-                      <p id="type" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Material</label>
-                      <p id="material" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Date</label>
-                      <p id="date" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Culture</label>
-                      <p id="culture" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Museum</label>
-                      <p id="museum" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Accession Number</label>
-                      <p id="accession-number" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Provenance</label>
-                      <p id="provenance" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Dimensions</label>
-                      <p id="dimensions" class="text">
-                      </p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Tags</label>
-                      <p id="tags" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Source</label>
-                      <p id="source" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Relations</label>
-                      <p id="relations" class="text"></p>
-                  </div>
-                  <div class="info-box small">
-                      <label>Game Relation</label>
-                      <p id="game-relation" class="text"></p>
-                  </div>
-              </div>
+  <!-- popup / overlay (map’tekiyle aynı) -->
+  <div class="background-overlay">
+    <div class="form-container">
+      <div class="form-header">
+        <h1 class="item-name-title"></h1>
+        <span class="close-button">&times;</span>
+      </div>
+      
+      <div class="content-section">
+        <div id="real-img" class="image-placeholder large"></div>
+        <div id="game-img" class="image-placeholder large"></div>
+      </div>
 
+      <div class="content-section info-row">
+        <div class="info-box small">
+            <label>ID</label>
+            <p id="id" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Title</label>
+            <p id="title" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Type</label>
+            <p id="type" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Material</label>
+            <p id="material" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Date</label>
+            <p id="date" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Culture</label>
+            <p id="culture" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Museum</label>
+            <p id="museum" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Accession Number</label>
+            <p id="accession-number" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Provenance</label>
+            <p id="provenance" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Dimensions</label>
+            <p id="dimensions" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Tags</label>
+            <p id="tags" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Source</label>
+            <p id="source" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Relations</label>
+            <p id="relations" class="text"></p>
+        </div>
+        <div class="info-box small">
+            <label>Game Relation</label>
+            <p id="game-relation" class="text"></p>
+        </div>
+      </div>
 
-  <div class="content-controls" id="difficulty-controls-container">
-      <div class="content-options">
-          
+      <div class="content-controls" id="difficulty-controls-container">
+        <div class="content-options">
           <div class="control-group">
               <span class="control-label">CONTENT</span> 
               <span class="level-indicator" id="content-level-indicator">Simple</span>
               <div class="control-buttons">
-                  <button type="button" class="action-button minus-button">
-                      <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="action-button plus-button">
-                      <i class="fas fa-plus"></i>
-                  </button>
+                  <button type="button" class="action-button minus-button">-</button>
+                  <button type="button" class="action-button plus-button">+</button>
               </div>
           </div>
-          
           <div class="control-group">
               <span class="control-label">Language</span> 
               <span class="level-indicator" id="language-level-indicator">Simple</span>
               <div class="control-buttons">
-                  <button type="button" class="action-button minus-button">
-                      <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="action-button plus-button">
-                      <i class="fas fa-plus"></i>
-                  </button>
+                  <button type="button" class="action-button minus-button">-</button>
+                  <button type="button" class="action-button plus-button">+</button>
               </div>
           </div>
-          
+        </div>
       </div>
-  </div>
 
-    <div class="content-section description-row">
+      <div class="content-section description-row">
         <div class="description-box full">
             <label>Description</label>
             <p id="description" class="text"></p>
             
             <div class="extra-info">
                 <p id="extra-description-text" class="text hidden"></p> 
-                <button id="btn-show-more" class="control-btn" type="button">Show More</button> 
             </div>
+
+            <button id="btn-show-more" class="control-btn" type="button">Show More</button>
         </div>
-    </div>
-    
-    <div class="form-footer">
+      </div>
+      
+      <div class="form-footer">
         <button class="button back-button">Back</button>
         <button class="button next-button">Next</button>
+      </div>
     </div>
   </div>
-    </div>
+
   <div class="tooltip" id="tooltip" hidden></div>
 
-<script src="js/exhibition.js"></script>
-<script src="js/theme-switcher.js"></script>
-<script src="js/script.js"></script>
+  <!-- önce marker’ları üret -->
+  <script>
+    (function(){
+      // DATA_STORE’daki isimlerle eşleşecek id’ler
+      const MARKERS = [
+        { id:'hades',     x:51, y:85, label:'Hades' },
+        { id:'ambrosia',  x:35, y:80, label:'Ambrosia' },
+        { id:'blade',     x:67, y:83, label:'Stygian Blade' },
+        { id:'trove',     x:51, y:72, label:'Tomb Trove' },
+        { id:'ares',      x:68, y:66, label:'Ares' },
+        { id:'charon',    x:58, y:56, label:'Charon' },
+        { id:'vase',      x:50, y:53, label:'Vase' },
+        { id:'obol',      x:70, y:49, label:'Obol Coin' },
+        { id:'zeus',      x:56, y:47, label:'Zeus' },
+        { id:'shield',    x:70, y:38, label:'Greek Shield' },
+        { id:'chariot',   x:36, y:36, label:'Chariot' },
+        { id:'minotaur',  x:52, y:26, label:'Minotaur' },
+        { id:'bow',       x:71, y:22, label:'Bow & Arrow' },
+        { id:'athena',    x:17, y:36, label:'Athena' },
+        { id:'cerberus',  x:51, y:13, label:'Cerberus' }
+      ];
+
+      const host = document.getElementById('markers');
+      const tip  = document.getElementById('tooltip');
+
+      MARKERS.forEach(p => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        // BURASI ÖNEMLİ: script.js bu sınıfı arıyor
+        btn.className = 'marker marker-buttons';
+        // BURASI ÖNEMLİ: DATA_STORE anahtarıyla aynı
+        btn.id = p.id;
+
+        btn.style.left = p.x + '%';
+        btn.style.top  = p.y + '%';
+        btn.setAttribute('aria-label', p.label);
+
+        // küçük ikon istersen:
+        // const img = document.createElement('img');
+        // img.src = 'images/Icon' + p.label.replace(/\s+/g,'') + '.webp';
+        // btn.appendChild(img);
+
+        // tooltip
+        btn.addEventListener('mouseenter', () => {
+          if (!tip) return;
+          tip.hidden = false;
+          tip.textContent = p.label;
+        });
+        btn.addEventListener('mousemove', (e) => {
+          if (!tip) return;
+          tip.style.left = (e.clientX + 10) + 'px';
+          tip.style.top  = (e.clientY + 10) + 'px';
+        });
+        btn.addEventListener('mouseleave', () => {
+          if (!tip) return;
+          tip.hidden = true;
+        });
+
+        host.appendChild(btn);
+      });
+    })();
+  </script>
+
+  <!-- mevcut js’lerin aynen kalsın -->
+  <script src="js/exhibition.js"></script>
+  <script src="js/theme-switcher.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
