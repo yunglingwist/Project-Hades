@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>HADES — Disclaimern</title>
+  <title>HADES — Disclaimer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/style.css" />
   <link id="theme-css" rel="stylesheet" href="css/themes/theme-1990-2025.css" />
@@ -15,10 +15,10 @@
       <a class="brand" href="index.html"><img src="images/HadesLogoRed.png" alt="Hades Logo" /></a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="exhibition.html">Exhibition</a>
+        <a href="exhibition.html" class="active">Exhibition</a>
         <a href="map.html">Map</a>
         <a href="documentation.html">Documentation</a>
-        <a href="disclaimer.html"class="active">Disclaimer</a>
+        <a href="disclaimer.html">Disclaimer</a>
       </nav>
       <div class="theme-select">
         <label for="theme" class="visually-hidden">Theme</label>
@@ -38,42 +38,65 @@
  <!-- Info -->
 <section class="project-info">
   <h2>Source Material</h2>
+  <p>This website is the final project for the 'Information Modeling and Web Technologies' course at the University of Bologna, led by Prof. Fabio Vitali. 
+    The main goal is to explore how different designs—specifically typography and layout—can be used to improve the digital experience of museums. 
+    Crucially, we investigate how effective storytelling can be applied when moving museum collections online. 
+    The documents presented here were chosen for their complexity from various public sources; they are used strictly for this academic exploration and are not intended to replace the original publications.</p>
+  <ul>
+    <li>
+    <a href="https://www.metmuseum.org/art/collection">
+      The Metropolitan Museum of Art</a>
+    </li>
+    <li>
+    <a href="https://www.academia.edu/19800165/The_Bronze_Mars_of_Zeugma_marginal_notes_on_its_discovery_and_conservation_treatment">
+      Zeugma Mosaic Museum (Gaziantep Archaeology Museum)</a>
+    </li>
+    <li>
+    <a href="https://www.namuseum.gr/en/collection">
+      National Archaeological Museum, Athens</a>
+    </li>
+    <li>
+    <a href="https://www.britishmuseum.org/collection">
+      British Museum</a>
+    </li>  
+    <li>
+    <a href="https://www.museidigenova.it">
+      Musei di Genova (Genoa, Italy)</a>
+    </li>
+    <li>
+    <a href="https://www.museivaticani.va/content/museivaticani/en.html">
+      Vatican Museums, Sistine Chapel</a>
+    </li>
+    <li>
+    <a href="https://www.getty.edu/art/collection/">
+      The J. Paul Getty Museum</a>
+    </li>
+    <li>
+    <a href="https://www.collezionegalleriaborghese.it/en">
+      Galleria Borghese, Rome</a>
+    </li>
+    <li>
+    <a href="https://www.vam.ac.uk/collections">
+      Victoria and Albert Museum, London</a>
+    </li>
+    <li>
+    <a href="https://www.kulturportali.gov.tr/medya">
+      Archaeological Museum of Istanbul</a>
+    </li>
+    <li>
+    <a href="https://collections.louvre.fr/">
+      Musée du Louvre</a>
+    </li>
+  </ul>
   <p>All copyrights and related rights on the content remain with their original owners. All copyright on the typographic and layout choices belong to 2025 © CEYDA UYAR, ATAKAN KAYI, YIGIT AK</p>
 </section>
 
-  <!-- Theme Switcher -->
-  <script>
-    (function () {
-      const KEY = 'projecthades-theme';
-      const linkEl = document.getElementById('theme-css');
-      const select = document.getElementById('theme');
 
-      const THEME_FILES = {
-        "1500-1800":        "css/themes/theme-1500-1800.css",
-        "1800s":     "css/themes/theme-1800.css",
-        "1900-1950":  "css/themes/theme-1900-1950.css",
-        "1950-1990": "css/themes/theme-1950-1990.css",
-        "1990-2010":        "css/themes/theme-1990-2010.css",
-        "2035":             "css/themes/theme-2035.css"
-      };
-
-      function applyTheme(val){
-        const href = THEME_FILES[val] || THEME_FILES["1990-2010"];
-        linkEl.setAttribute('href', href);
-        localStorage.setItem(KEY, val);
-      }
-
-      const saved = localStorage.getItem(KEY) || '1990-2010';
-      select.value = saved;
-      applyTheme(saved);
-      select.addEventListener('change', e => applyTheme(e.target.value));
-    })();
-  </script>
-
-    <!-- Footer -->
   <footer class="site-footer">
     <div class="container">© Project HADES</div>
   </footer>
+
+<script src="js/theme-switcher.js"></script>
 
 </body>
 </html>
