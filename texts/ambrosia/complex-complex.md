@@ -1,11 +1,8 @@
----
-length: long
-competence: advanced
-tone: scholars
----
-This Roman glass jug (4th–5th century CE, object 15.43.239) demonstrates the technical and aesthetic developments in late antique glass production: the use of dip-moulding to control form, the elegant proportions characteristic of late imperial luxury vessels, and the circulation of such pieces within the social networks of elite Roman households. 
+Ambrosia in Hades is an affective currency rather than a material one. It emerges only once Zagreus has formed meaningful, reciprocal relationships. It unlocks Companions, enhances their potency, and serves as an emblem of completed emotional arcs. Its narrative function mirrors classical descriptions of Ambrosia as a divine substance whose value lies not in survival but in transcendence.
+The archaeological vessel connected to this concept is a colorless glass container with a faint bluish tint. Its morphology is characteristic of Roman and Hellenistic glasswork: a broad folded rim pressed flat to create a funnel-like mouth, a cylindrical neck expanding downward to a narrow shoulder, a body adorned with thirty-one evenly spaced vertical ribs, and a base indented toward a pontil scar. The handle, applied separately, was drawn upward, curved outward, and folded back onto the rim in a single fluid gesture. Most striking is its iridescent weathering — the shimmering surface created by long burial and chemical interaction with the earth, producing a luminous effect reminiscent of divine radiance.
+[show more]
 
-<!-- more -->
-
-It is also an object commonly found in funerary contexts, linking the vessel’s utility with symbolic roles in commemoration and ritual practice.
-
+In Greek mythology, Ambrosia occupies a conceptual rather than strictly physical category. Its semantic field spans nourishment, fragrance, preservation, and immortality. Writers alternately describe it as a food, anointment oil, honey, perfume, wine, or an ethereal substance. Its core function, however, is constant: Ambrosia grants the gods incorruptibility. Wounds heal, beauty endures, and the boundary between mortal decay and divine permanence is drawn through this substance.
+The glass vessel echoes this liminality. Such containers often held perfumed oils used in ritual purification, funerary rites, and elite self-presentation. The act of anointing with fragrant oil blurred the mortal–divine divide, momentarily elevating the user through scent and ritual gesture. The vessel’s ribbing provided grip for careful handling, while its delicate thickness suggests it stored something rare and safeguarded.
+Aegis-like artifacts of emotion in Hades, Ambrosia symbolizes relational immortality. While Nectar initiates connection, Ambrosia preserves it, stabilizing bonds that would otherwise wither in the harshness of the Underworld. Its mythic description in the game — a substance that tastes differently to each recipient, adapting to their ideal flavor — echoes ancient understandings of Ambrosia as a fluid whose essence shifts according to context, ritual, and mythic retelling.
+Thus the ancient vessel and the in-game Ambrosia converge conceptually. Both contain something precious, transformative, and identity-defining. The vessel protects a liquid that enhanced ritual presence; Ambrosia protects emotional bonds that transcend death and escape attempts. One preserves fragrance; the other preserves affection. Both operate within the symbolic grammar of immortality, memory, and the desire to hold onto what is rare and sacred.

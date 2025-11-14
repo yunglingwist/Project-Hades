@@ -1,10 +1,8 @@
----
-length: mid-size
-competence: average
-tone: adults
----
-The chariot (object no. 03.23.1) dates to the Archaic period (c. 550–525 BCE) and is constructed of hammered bronze plates with ivory inlays. It was recovered from a funerary tumulus at Monteleone di Spoleto and bears decorative reliefs depicting scenes of heroic combat, likely influenced by Homeric narratives.
+The Nemean Chariots in Hades race endlessly through Elysium. Their shape and design are based on the Nemean Lion, a symbol of strength and pride from the myth of Herakles. These chariots were trained with as if they were living creatures, forming a bond with their riders.
+The real-world chariot that parallels this idea is the Monteleone chariot, one of the best-preserved parade chariots from ancient Italy. It was discovered in a tomb filled with bronze and ceramic objects. This chariot was made for special ceremonies and for people of high status. Its structure included wooden frames covered in bronze, iron wheels, leather bindings, and ivory decorations.
+[show more]
 
-<!-- more -->
-
-The piece was originally mounted on a wooden frame, now lost, and was placed in the tomb as part of elite funerary display.
+The decoration on the real chariot tells the story of Achilles — his armor, his battles, and even his rise into the heavens in a winged chariot. The panels were made in repoussé, a technique where metal is shaped from behind to create raised images. These scenes show how the ancient world connected heroism with divine glory.
+The Nemean Chariots in Hades work the same way. Their design is inspired by a mythical beast. They move constantly, as though the memory of battle never ends.
+Just as the Monteleone chariot was buried with someone important to symbolize honor, the Nemean Chariots exist in Elysium, a place meant for eternal heroes.
+The real chariot reflects ancient beliefs about status and immortality. The in-game chariots show these same ideas through motion and myth.

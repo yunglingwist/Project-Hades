@@ -1,0 +1,6 @@
+Stygius in Hades is an old, broken sword filled with power and memories. The real Roman sword it is compared to was also very old, made almost 2,000 years ago. It had an iron blade and decorated metal pieces on its handle. Just like Stygius, it shows signs of age: the blade was broken, parts were missing, and the metal was worn down.
+Both swords once belonged to strong fighters — one to the gods of the Underworld, and the other to Roman soldiers who protected their lands.
+[show more]
+
+In the game, Stygius is a blade that remembers battles and waits for a new wielder. The real Roman sword also carries the feeling of history. Its blade was wide and straight, made for stabbing in close combat. The handle had a crown-like shape, showing that the craftsman cared about beauty as well as strength.
+Both weapons remind us that even when something breaks, its story continues. Stygius becomes whole again through Zagreus, just like how archaeologists bring the story of the Roman sword back to life by studying its pieces.

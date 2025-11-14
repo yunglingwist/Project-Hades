@@ -1,0 +1,8 @@
+Athena in Hades is the goddess of wisdom and strategy. She gives Zagreus defensive powers, especially Deflect, which turns enemy attacks back at them. Her Status Curse, Exposed, encourages striking opponents from behind — a smart, tactical way to fight.
+The real historical background associated with Athena comes from Classical Athens, a time of huge artistic and political growth after the Persian Wars. Victories at Marathon, Salamis, and Plataea helped create a period of confidence and creativity. Artists came from everywhere to adorn the city with sculptures and temples, many dedicated to Athena, their patron goddess.
+[show more]
+
+In this period, sculptors developed new techniques: fuller three-dimensional figures, realistic movement, and expressive drapery. The famous Athena Parthenos statue on the Acropolis — originally made from gold and ivory by the sculptor Pheidias — was the city’s pride. It symbolized wisdom, protection, and civic identity.
+Other works from the same era, like the reliefs showing Eleusinian deities or the funerary stelae depicting daily moments, show how Greek art captured both divine and human experience. Even during the hardships of the Peloponnesian War, Athenians kept creating: emotional grave markers, powerful sculptures by Skopas and Timotheus, and bronze youth statues recovered from shipwrecks.
+Athena in Hades reflects this same tradition. Her boons do not glorify violence; they value precision, timing, and awareness. Just like the city that worshipped her, she stands for thoughtful action.
+Both the goddess in the game and the art of Classical Athens show that wisdom is not passive — it actively shapes the world, protects people, and turns conflict into an opportunity for clarity.

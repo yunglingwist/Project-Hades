@@ -1,10 +1,7 @@
----
-length: mid-size
-competence: average
-tone: adults
----
-The glass jug (object number 15.43.239) dates from the Late Imperial period (4th–5th century CE). It was made by blowing glass in a mould (dip mould) and displays the fine craftsmanship of Roman glassware at a time of transition. Such jugs were often used in households for pouring liquids like wine or oil.
+Ambrosia in the game is a rare Artifact that Zagreus gives only to those he has formed deep bonds with. It can strengthen those relationships, unlock powerful companions, and improve their abilities. While Diamonds and Titan Blood show progress, Ambrosia represents trust and affection.
+The real item connected to this idea is a delicate ancient glass vessel. It has a folded rim, a softly spreading mouth, a cylindrical neck, a ribbed body with thirty-one vertical ridges, and a bluish tint that changes color in the light. Although broken in the past, it was repaired and now glows with iridescent weathering — the rainbow-like shine glass develops after being buried for centuries.
+[show more]
 
-<!-- more -->
-
-In Hades, Ambrosia is a rare resource used to deepen bonds with gods and companions.
+In ancient Greek culture, Ambrosia was the food or drink of the gods. It granted immortality, preserved divine beauty, and symbolized a life untouched by decay. Mortals needed bread and water to survive; gods needed only Ambrosia and nectar for pleasure. Its meaning shifted across myths: sometimes it was a honey-like food, sometimes a fragrant perfume, and sometimes a divine wine.
+The ancient glass bottle reflects this concept. Perfumes, oils, and sweet aromatic liquids were stored in vessels like this. These substances were luxurious and used in ceremonies, burials, and offerings — moments where humans tried to connect with something divine.
+In Hades, Ambrosia carries the same symbolism. It is not just a reward. It is a bridge between people. It strengthens bonds in the Underworld just as perfumed oils or sacred liquids once bridged mortals and gods in rituals. Ancient glass vessels preserved fragrances; Ambrosia preserves memories, loyalty, and emotional meaning.
