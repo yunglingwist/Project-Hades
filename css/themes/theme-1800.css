@@ -14,3 +14,7 @@
   --font-text: "Abril Fatface", "Times New Roman", ui-serif, serif; 
   --font-display: "Abril Fatface", "Times New Roman", serif;
 }
+/* documentation info */
+.theme-text::after {
+  content: "Yigit: 1800s Theme";
+}

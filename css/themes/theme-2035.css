@@ -16,3 +16,7 @@
   --font-text: 'Orbitron';
   --font-display: 'Orbitron';
 }
+/* documentation info */
+.theme-text::after {
+  content: "Atakan: 2035 Theme";
+}

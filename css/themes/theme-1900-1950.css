@@ -9,10 +9,15 @@
   --color-highlight: #B03A2E;       /* hover accent */
   --text-muted: #4A4A4A;
 
+  
   /* map background for this theme */
   --background-map: url('../images/Map3.jpg');
 
   /* typography */
   --font-text: 'Poppins';
   --font-display: 'Poppins';
+}
+/* documentation info */
+.theme-text::after {
+  content: "Ceyda: 1900-1950 Theme";
 }

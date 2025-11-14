@@ -14,3 +14,7 @@
   --font-text: "Libre Caslon Text", "Times New Roman", ui-serif, serif; /* İstenen font */
   --font-display: "Libre Caslon Text", "Times New Roman", serif;
 }
+/* documentation info */
+.theme-text::after {
+  content: "Yigit: 1500-1800 Theme";
+}

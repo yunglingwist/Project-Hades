@@ -16,3 +16,7 @@
   --font-text: 'Bangers';
   --font-display: 'Bangers';
 }
+/* documentation info */
+.theme-text::after {
+  content: "Ceyda: 1950-1990 Theme";
+}

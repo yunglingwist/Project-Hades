@@ -15,12 +15,8 @@
   /* typography */
   --font-text: 'Space Mono';
   --font-display: 'Space Mono';
-
-  /* örnek: tema arka planı için (isteğe bağlı)
-  body{
-    background-image: url('../../images/bg/1990-2025.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  */
+}
+/* documentation info */
+.theme-text::after {
+  content: "Atakan: 1990-2010 Theme";
 }
