@@ -21,3 +21,9 @@
 .theme-text::after {
   content: "Ceyda: 1900-1950 Theme";
 }
+/* documentation image changer */
+:root {
+  #theme-image {
+    content: url("../../images/moodboard3.jpg");
+  }
+}

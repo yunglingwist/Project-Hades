@@ -18,3 +18,9 @@
 .theme-text::after {
   content: "Yigit: 1800s Theme";
 }
+/* documentation image changer */
+:root {
+  #theme-image {
+    content: url("../../images/moodboard2.jpg");
+  }
+}

@@ -20,3 +20,9 @@
 .theme-text::after {
   content: "Atakan: 2035 Theme";
 }
+/* documentation image changer */
+:root {
+  #theme-image {
+    content: url("../../images/moodboard6.jpg");
+  }
+}

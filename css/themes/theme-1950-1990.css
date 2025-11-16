@@ -20,3 +20,9 @@
 .theme-text::after {
   content: "Ceyda: 1950-1990 Theme";
 }
+/* documentation image changer */
+:root {
+  #theme-image {
+    content: url("../../images/moodboard4.jpg");
+  }
+}
