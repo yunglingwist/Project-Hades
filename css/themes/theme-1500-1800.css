@@ -1,3 +1,4 @@
+/* 1500-1800 (Libre Caslon / Baroque) */
 :root{
 
   --color-bg:#172639;
@@ -19,7 +20,7 @@
   content: "Yigit: 1500-1800 Theme";
 }
 .theme-text2::after {
-  content: "This theme draws inspiration from Baroque and early Classical art, emphasizing richness, contrast, and layered composition. The typography choice features elegant, serif-like lettering reminiscent of manuscript or early printing typefaces, evoking a sense of heritage and myth. The color palette leans toward earth tones, golds, and deep reds, mirroring the visual warmth of frescoes and oil paintings. The layout uses ornate frames and symmetrical balance to suggest museum-like prestige, referencing the grandeur of mythological artworks from this period.";
+  content: "I drew inspiration from Baroque and early Classical art, emphasizing richness, contrast, and layered composition. For the typography, I choose a mix of Libre Caslon & Times New Roman featuring elegant, serif-like lettering resembling manuscripts or early printing typefaces, evoking a sense of heritage and myth. The color palette leans toward earth tones, golds, and hints of reds, mirroring the visual warmth of frescoes and oil paintings. The layout uses ornate frames and symmetrical balance to suggest museum-like prestige, referencing the greatness of mythological artworks from this period.";
 }
 /* documentation image changer */
 :root {

@@ -1,4 +1,4 @@
-/* Second Half 20th (Bangers, Pop-art inspired ) */
+/* 1950-1990 (Bangers, Pop-art) */
 :root{
   /* functional color tokens */
   --color-bg: #FFF200;
@@ -17,8 +17,11 @@
   --font-display: 'Bangers';
 }
 /* documentation info */
-.theme-text::after {
+.theme-text1::after {
   content: "Ceyda: 1950-1990 Theme";
+}
+.theme-text2::after {
+  content: "This theme embraces the vibrancy and experimentation of mid- to late-century pop culture. Inspired by Pop Art, Funk, and early digital aesthetics, the typography uses bold, playful letterforms such as Bangers, reflecting the energy of comic books and street posters. The color palette features bright magenta, cyan, yellow, and electric blue, chosen for their striking contrast and sense of fun. Flat shapes, thick outlines, and block compositions reference the graphic work of artists like Roy Lichtenstein, while the overall tone feels lively and rebellious—an intentional break from the formal designs of earlier themes.";
 }
 /* documentation image changer */
 :root {

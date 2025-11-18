@@ -1,3 +1,4 @@
+/* 1800s (Abril Fatface / Neoclassic) */
 :root{
 
   --color-bg:#071E44;
@@ -15,8 +16,11 @@
   --font-display: "Abril Fatface", "Times New Roman", serif;
 }
 /* documentation info */
-.theme-text::after {
+.theme-text1::after {
   content: "Yigit: 1800s Theme";
+}
+.theme-text2::after {
+  content: "For the 19th century, the design adopts a Neoclassical aesthetic with clean lines and restrained decoration. This era’s visual identity was about refinement and rational structure, reflected in the balanced typography inspired by transitional serif fonts. The color palette consists of muted creams, deep navy, and aged parchment, chosen to emulate antique maps and explorer journals. The inclusion of soft gradients and minimal shadows ties into the visual calm of portraiture and Enlightenment-era design principles—bridging mythology with the intellectual curiosity of the time.";
 }
 /* documentation image changer */
 :root {

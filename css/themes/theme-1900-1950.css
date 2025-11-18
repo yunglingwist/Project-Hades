@@ -1,4 +1,4 @@
-/* First Half 20th (Poppins / Art Deco inspired) */
+/* 1900-1950 (Poppins / Art Deco) */
 :root{
   /* functional color tokens */
   --color-bg: hsl(240, 42%, 18%);
@@ -18,8 +18,11 @@
   --font-display: 'Poppins';
 }
 /* documentation info */
-.theme-text::after {
+.theme-text1::after {
   content: "Ceyda: 1900-1950 Theme";
+}
+.theme-text2::after {
+  content: "When creating this theme, the focus turned toward Art Deco and early Modernist design. I studied various typographic trends from the early 20th century and found that bold geometric sans-serifs like Lovelo or Futura capture the spirit of progress and elegance typical of the period. Colors such as gold, black, and deep teal echo the luxury and optimism of the 1920s and 1930s. The backgrounds use subtle texture to mimic aged print surfaces, while shapes and borders use symmetry and metallic tones inspired by The Great Gatsby and golden-age poster art.";
 }
 /* documentation image changer */
 :root {

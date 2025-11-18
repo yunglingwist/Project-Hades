@@ -9,7 +9,7 @@
   --color-highlight: #9A6CFF;       /* secondary neon accent */
   --text-muted: #A7B6C8;
 
-  /* map background for this theme */
+  /* map background*/
   --background-map: url('../images/Map6.jpg');
 
   /* typography */
@@ -17,8 +17,11 @@
   --font-display: 'Orbitron';
 }
 /* documentation info */
-.theme-text::after {
+.theme-text1::after {
   content: "Atakan: 2035 Theme";
+}
+.theme-text2::after {
+  content: "The futuristic theme looks ahead with a Cyberpunk-inspired aesthetic—dark, sleek, and glowing. Typography choices rely on ultra-clean, condensed sans-serifs, mimicking futuristic HUD interfaces. The palette shifts to midnight blues, blacks, and neon accents (cyan and violet) to convey a sense of depth and digital mystery. Glows and reflections replace traditional texture, referencing Blade Runner and Daft Punk’s visual language. This design symbolizes the myth reimagined in a data-driven world, where gods inhabit networks rather than temples.";
 }
 /* documentation image changer */
 :root {
