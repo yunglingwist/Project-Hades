@@ -362,7 +362,18 @@ body{
 }
 
 /* Text switcher */
-.theme-text::after {
+.theme-text1::after {
   content: "Default text";
   color: var(--color-text);
+}
+.theme-text2::after {
+  content: "Default text";
+  color: var(--color-bg);
+}
+
+/*Theme image*/
+#theme-image {
+  width: 100%;
+  max-width: 800px;  /* you can adjust */
+  height: auto;
 }

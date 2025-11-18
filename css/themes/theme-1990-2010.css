@@ -1,4 +1,4 @@
-/* 1990–2025 (default screen theme) */
+/* 1990–2010 (default screen theme) */
 :root{
   /* functional color tokens */
   --color-bg: #0F2035;
@@ -9,7 +9,7 @@
   --color-highlight: #FFD991;       /* hover/highlight */
   --text-muted: #B7A987;
 
-  /* map background for this theme */
+  /* map background */
   --background-map: url('../images/Map5.jpg');
 
   /* typography */
