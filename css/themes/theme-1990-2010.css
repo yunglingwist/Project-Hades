@@ -7,7 +7,6 @@
   --color-accent: #00c8ff;        /* bright 'aero' aqua highlight */
   --color-accent-border: #00a4d4; /* darker aqua border */
   --color-highlight: #b4f4ff;     /* light glossy hover highlight */
-
   --text-muted: #4f7f88;          /* softened desaturated teal */
 
   /* map background */
@@ -20,8 +19,6 @@
 
 /* documentation info */
 .theme-text1::after {
-  content: "Atakan: 1990-2010 Theme";
-.theme-text::after {
   content: "Atakan: 1990-2010 Frutiger Aero Theme";
 }
 .theme-text2::after {
