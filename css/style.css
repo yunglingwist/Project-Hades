@@ -316,6 +316,12 @@ body{
   text-align:center;
 }
 /* ========= Documentation ========= */
+.doc-container {
+  max-width: 1000px;   
+  margin: 0 auto;     /*centers*/
+  padding: 0 20px;  /*sides*/
+}
+
 /* Toggle panels */
 .panel {
   margin: 40px 0;
@@ -323,6 +329,7 @@ body{
   border-radius: 12px;
   background-color: var(--color-accent);
   color: var(--color-bg);
+  padding: 0 20px; 
 }
 
 /* Removed default triangle so we can style our own */

@@ -19,8 +19,13 @@
 }
 
 /* documentation info */
+.theme-text1::after {
+  content: "Atakan: 1990-2010 Theme";
 .theme-text::after {
   content: "Atakan: 1990-2010 Frutiger Aero Theme";
+}
+.theme-text2::after {
+  content: "The aesthetic of this era merges Y2K futurism with Frutiger Aero nostalgia—clean, glossy, and hopeful. Rounded sans-serif typography, often with subtle neon gradients, evokes the optimistic tech aesthetic of early web design. The color palette features light blues, silvers, and lime greens, symbolizing connection and progress. Transparent layering and floating elements represent digital space, echoing the bubbly, reflective textures of early 2000s interfaces. The goal was to make the mythological world feel like part of the early internet age—modern yet naive in its fascination with technology.";
 }
 
 /* documentation image changer */
