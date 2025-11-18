@@ -1,13 +1,14 @@
-/* 1990–2010 (default screen theme) */
+/* 1990–2010 (Frutiger Aero style) */
 :root{
-  /* functional color tokens */
-  --color-bg: #0F2035;
-  --color-text: #E7D6A3;
+  /* functional color tokens (Frutiger Aero) */
+  --color-bg: #dffaff;            /* soft aqua background */
+  --color-text: #003b4a;          /* deep teal for high readability */
 
-  --color-accent: #E1B258;          /* primary accent */
-  --color-accent-border: #C69A4B;   /* border accent */
-  --color-highlight: #FFD991;       /* hover/highlight */
-  --text-muted: #B7A987;
+  --color-accent: #00c8ff;        /* bright 'aero' aqua highlight */
+  --color-accent-border: #00a4d4; /* darker aqua border */
+  --color-highlight: #b4f4ff;     /* light glossy hover highlight */
+
+  --text-muted: #4f7f88;          /* softened desaturated teal */
 
   /* map background */
   --background-map: url('../images/Map5.jpg');
@@ -16,10 +17,12 @@
   --font-text: 'Space Mono';
   --font-display: 'Space Mono';
 }
+
 /* documentation info */
 .theme-text::after {
-  content: "Atakan: 1990-2010 Theme";
+  content: "Atakan: 1990-2010 Frutiger Aero Theme";
 }
+
 /* documentation image changer */
 :root {
   #theme-image {
