@@ -1,6 +1,9 @@
 Ares is the embodiment of raw warfare in Hades. His boons give Zagreus destructive power, causing long-term damage through Doom or forcing enemies into deadly Blade Rifts. He represents chaos, violence, and the thrill of battle.
 The real artifact associated with him is a bronze statue of Mars discovered in Zeugma. This statue was buried for centuries before being unearthed during modern excavations. Sculpted with precise detail, Mars stands in a classical pose, representing military power in the Roman world.
-[show more]
+
+<!-- more -->
+
+
 
 In Roman culture, Mars was not only a war god but also a symbol of strength, military success, and the protection of the state. Soldiers prayed to him before battles and offered thanks after victory. His statues were placed in important public places, reminding citizens of Rome’s power and the duty of its armies.
 The Mars statue from Zeugma reflects this symbolism. Its bronze shine (even when aged), strong body posture, and commanding expression show how Roman sculpture tried to capture the spirit of war. It was important enough to be carefully restored so it could be displayed again.

@@ -1,6 +1,9 @@
 Ares in Hades embodies the uncontrollable, visceral dimension of warfare. Unlike Athena’s tactical clarity, Ares represents the ecstasy of battle, the seductive pull of destruction, and the raw emotional intensity that drives combatants into chaos. His boons deliver delayed annihilation through Doom, temporal distortions through Blade Rifts, and amplifications of violence that reward relentless aggression.
 The real-world counterpart, the bronze Mars statue of Zeugma, reflects a different but related ideological framework. Excavated during late 20th-century campaigns, the sculpture emerged as one of the most remarkable finds of the region. Crafted during a period when Roman artistic traditions blended with local Anatolian aesthetics, the statue shows Mars in a poised stance, embodying composure rather than rage. This contrast is instructive: Roman portrayals of Mars often emphasized authority, endurance, and divine guardianship, not merely slaughter.
-[show more]
+
+<!-- more -->
+
+
 
 The statue’s survival tells its own war story. Zeugma, repeatedly attacked, burned, abandoned, and repopulated throughout antiquity, preserved the god of war beneath layers of destruction. Mars’ bronze body endured the collapse of buildings, the erosion of time, and the pressures of the earth. When restored, the figure reentered the world as a resurrected icon, much like Ares’ own sudden and dramatic appearances in the Underworld.
 Ares’ abilities reflect psychological and symbolic aspects of ancient warfare. Doom, a curse that detonates moments after being inflicted, resembles the fear and uncertainty that precede violent impact — the dread of inevitable harm. Blade Rifts evoke the chaos of clashing metal and collapsing formations, where boundaries of space dissolve into spinning danger.

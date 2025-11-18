@@ -1,6 +1,7 @@
 Charon in Hades represents a stable point within the shifting chaos of the Underworld. His silence, consistency, and role as ferryman contrast with the violent or emotional gods who help—or hinder—Zagreus. His groans act like a language of their own, and his shops and Wells appear throughout the realms as markers of rest and opportunity.
 In Michelangelo’s Last Judgement, Charon appears as a fierce boatman. He is shown in the act of driving the condemned toward their divine judge. This visual choice was inspired by Dante’s Inferno, where Charon angrily forces sinners into his boat, shouting at them as he rows.
-[show more]
+
+<!-- more -->
 
 While Charon in the painting is harsh and frightening, the game’s Charon is oddly gentle—still intimidating, but not cruel. Both are responsible for ferrying souls, but their emotional tone differs greatly.
 What ties them together is the symbolic meaning of the ferryman: he stands at the threshold between different states of existence. In art and myth, he is a mediator. In the game, he mediates Zagreus’s progress by offering resources. In the fresco, he mediates the transition from earthly life to divine judgement.

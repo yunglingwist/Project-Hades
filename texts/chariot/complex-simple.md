@@ -1,6 +1,7 @@
 In Hades, the Nemean Chariots are both dangerous and impressive. They charge across Elysium with the force of the ancient Nemean Lion, which Herakles defeated during his labors. These chariots behave almost like living beings because their riders believed their bond with the vehicle made them stronger.
 The historical object connected to this is the Monteleone parade chariot. It is made of bronze sheets over a wooden frame, with iron tires, leather straps, and ivory inlays. Its craftsmanship suggests it belonged to an elite individual and was used in ceremonial events rather than battle.
-[show more]
+
+<!-- more -->
 
 What makes the Monteleone chariot especially important is its artwork. The three main bronze panels show Achilles receiving armor from Thetis, fighting rival heroes, and ascending to the heavens. These scenes combine Greek myth with Etruscan artistic style, emphasizing glory, strength, and transformation — ideas also important for the heroes of Elysium.
 The Nemean Chariots in the game embody these same heroic themes. They race eternally, expressing pride, power, and the desire for perfection.

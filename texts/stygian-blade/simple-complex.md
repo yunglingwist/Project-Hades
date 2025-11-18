@@ -1,6 +1,7 @@
 Stygius is described as one of the greatest weapons ever used in the war against the Titans. The real Roman sword that parallels it comes from the 1st century CE and shows how carefully ancient weapons were made. It had a long iron blade and a handle decorated with copper-alloy pieces shaped with small patterns.
 Both the mythical blade and the real one have a broken tip. Both carry marks that show they survived battles, weather, and time.
-[show more]
+
+<!-- more -->
 
 The Roman sword’s blade was flat, wide, and designed for fighting at close range. Roman soldiers were trained to stab rather than slash, because stabbing was quicker and more effective. The sword’s hilt shows a mix of styles: Roman military design with Celtic artistic decoration. This reflects how armies borrowed ideas from different cultures.
 In Hades, Stygius also represents blending: a divine weapon reforged by a mortal prince, made from the past but reshaped for the present. Just like the real sword’s broken blade still reveals its purpose, Stygius — damaged yet alive — shows how a weapon can hold history, identity, and power even when no longer whole. Both swords show that the past never fully disappears; it simply changes form.

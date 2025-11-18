@@ -1,6 +1,7 @@
 Athena in Hades represents a refined understanding of warfare: she focuses not on brutality but on discipline, foresight, and structured defense. Her Deflect mechanic captures her essence perfectly — she overcomes violence not by matching force with force, but by redirecting it.
 The historical narrative connected to her reflects this same character. In Classical Athens, after the Persian invasions, Athenians developed a sophisticated urban culture under Pericles, marked by democracy, philosophy, and remarkable artistic innovation. Sculptures of gods and heroes from this period emphasize ideal beauty, calm strength, and balanced proportions.
-[show more]
+
+<!-- more -->
 
 Many artworks from this era — like the reliefs of Demeter and Persephone, the Ninnion Tablet, the statue of Nemesis, and the small marble versions of the Athena Parthenos — reflect Athena’s cultural surroundings: reverence, ritual, and civic identity. Even funerary stelae from the Peloponnesian War depict scenes of dignity rather than despair, echoing Athena’s composed nature.
 In Hades, Athena appears early, guiding Zagreus with practicality and kindness. Her tactical boons illustrate how wisdom works in real conflict: protecting yourself, creating openings, and responding thoughtfully rather than acting blindly.

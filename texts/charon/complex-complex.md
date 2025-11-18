@@ -1,6 +1,7 @@
 Charon in Hades embodies liminality — the state of being between worlds. As the ferryman of the Underworld, he interprets his duty not through speech, but through presence. His groaning voice suggests an ancient, submerged language. His shops, appearing at critical intervals, function like waystations on a metaphysical voyage. Through obols, the currency of the dead, Charon reinforces his mythic role as the collector and mover of souls.
 Michelangelo’s Last Judgement presents Charon in a dramatically different but thematically parallel form. Positioned in the lower right corner of the enormous fresco, Charon is painted with dynamic brutality: his oar raised, his body twisted with force, he thrusts the damned from his boat. This representation—borrowed from Dante rather than classical Greek sources—places Charon as a violent executor of divine order.
-[show more]
+
+<!-- more -->
 
 The fresco’s cosmology defines Charon as the lowest functioning agent within a vast hierarchy of salvation and condemnation. Christ’s commanding gesture initiates a cosmic rotation of figures; angels lift the blessed toward ascension; saints gather with symbolic attributes; trumpets awaken the dead; devils drag sinners downward. Within this grand theological choreography, Charon appears as the indispensable intermediary. He is not judge, angel, or demon, but a necessary mechanism of transition.
 In the game, Charon’s neutrality mirrors this theological function. He neither damns nor saves; he facilitates movement. The player’s progression through Tartarus, Asphodel, and Elysium depends on him as a stabilizing force. Where Michelangelo’s Charon enforces divine verdict, Supergiant’s Charon enables player agency.

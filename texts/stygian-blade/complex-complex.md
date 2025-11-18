@@ -1,6 +1,7 @@
 Stygius occupies a mythic position as a divine weapon associated with a foundational cosmic conflict — the sealing of the Titans. Its identity is defined by rupture: once complete, now fragmented; once wielded by gods, now reanimated by Zagreus. A parallel emerges in the archaeological sword from the 1st century CE, a Romano-British iron blade whose preserved remains reveal a similarly layered history of creation, use, and decay.
 This sword’s blade is flat in section, notably wide, and terminates in a dramatic break that removes almost a third of its length. The handle is assembled from copper-alloy elements fashioned into a crown-shaped terminal, ribbed bands, and decorative comma-shaped patterns. These stylistic features indicate a hybrid craft tradition — Roman military form integrated with Celtic ornamental vocabulary.
-[show more]
+
+<!-- more -->
 
 The broken blade of the archaeological sword suggests long operational use before failure: repeated sharpening, metal fatigue, and oxidation. Its hilt fittings, though tarnished, display intentional artistry that emphasises status as well as function. This reflects a broader pattern in Roman frontier weaponry, where auxiliary forces often carried arms that blended imperial military design with local aesthetic motifs.
 Stygius, in its lore, follows an analogous trajectory. As a weapon linked to divine warfare, it embodies prestige, memory, and identity. Yet its brokenness defines it as much as its glory. When Zagreus reforges the fragments, he does not restore the blade to its original divine state; instead, he creates a new hybrid object — part ancient relic, part personal weapon, animated by its “burning soul.”
