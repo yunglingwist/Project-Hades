@@ -36,6 +36,17 @@
   src: url('../fonts/SpaceMono-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Abril Fatface';
+  src: url('../fonts/AbrilFatface-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Libre Caslon Text';
+  src: url('../fonts/LibreCaslonText-Regular.ttf') format('truetype');
+}
+
+
 /* ========= Reset & Body ========= */
 *{ box-sizing: border-box; }
 html,body{ height:100%; }
