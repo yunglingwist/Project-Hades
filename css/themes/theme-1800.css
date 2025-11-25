@@ -12,8 +12,8 @@
   --background-map: url('../images/Map2.jpg'); /* Koyu temaya uygun varsayılan bir harita */
 
   /* typography */
-  --font-text: "Abril Fatface", "Times New Roman", ui-serif, serif; 
-  --font-display: "Abril Fatface", "Times New Roman", serif;
+  --font-text: 'Abril Fatface';
+  --font-display: 'Abril Fatface';
 }
 /* documentation info */
 .theme-text1::after {
