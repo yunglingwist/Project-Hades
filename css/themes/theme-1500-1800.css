@@ -12,8 +12,8 @@
   --background-map: url('../images/GameMap.jpg'); /* Koyu temaya uygun varsayılan bir harita */
 
   /* typography */
-  --font-text: "Libre Caslon Text", "Times New Roman", ui-serif, serif; /* İstenen font */
-  --font-display: "Libre Caslon Text", "Times New Roman", serif;
+  --font-text: 'Libre Caslon Text';
+  --font-display: 'Libre Caslon Text';
 }
 /* documentation info */
 .theme-text1::after {
