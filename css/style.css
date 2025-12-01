@@ -470,3 +470,156 @@ body{
 .nav-toggle.open span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
+/* ========= INTRO SPLASH SCREEN ========= */
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Arka planı tamamen karart */
+  z-index: 9999; /* En üst katman */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: opacity 0.5s ease; /* Kaybolma efekti */
+}
+
+/* Kutu (Resim + Yazı Çerçevesi) */
+.intro-box {
+  position: relative; /* Yazıyı buna göre konumlandıracağız */
+  width: 90%;         /* Mobilde genişlik */
+  max-width: 900px;   /* Masaüstünde maksimum genişlik (bunu artırabilirsin) */
+  border-radius: 12px;
+  overflow: hidden;   /* Köşeleri yuvarla */
+  box-shadow: 0 0 30px rgba(212, 170, 90, 0.3);
+}
+
+/* Zemin Resmi */
+.intro-img {
+  width: 100%;
+  height: auto;
+  display: block; /* Alt boşluğu yok et */
+}
+
+/* Yazı Katmanı (Overlay) */
+.intro-text {
+  position: absolute; /* Resmin üzerine çık */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Yazıları tam ortaya hizala */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* Yazıların okunması için resmin üzerine hafif siyah perde */
+  /* Eğer PNG'in zaten koyuysa burayı 0 yapabilirsin */
+  background-color: rgba(0, 0, 0, 0.4); 
+  padding: 20px;
+}
+
+/* Tipografi */
+.intro-text h2 {
+  color: #d4aa5a; /* Altın rengi */
+  font-family: var(--font-display);
+  font-size: clamp(20px, 5vw, 36px); /* Responsive Font */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.intro-text p {
+  color: #fff;
+  font-size: clamp(14px, 3vw, 18px);
+  line-height: 1.5;
+  max-width: 80%;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+.intro-text .instruction {
+  margin-top: 20px;
+  font-size: 12px;
+  opacity: 0.8;
+  font-style: italic;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink { 50% { opacity: 0.4; } }
+
+/* Game Info Section Styles */
+.game-info {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.info-box {
+  /* Temadan gelen değişkenleri kullanıyoruz, yoksa varsayılan renkler devreye girer */
+  background-color: var(--card-bg, rgba(20, 20, 20, 0.8)); 
+  border: 2px solid var(--accent-color, #d32f2f);
+  color: var(--text-color, #fff);
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.info-text-block h2, 
+.info-text-block h3 {
+  color: var(--accent-color, #d32f2f);
+  margin-bottom: 1rem;
+  font-family: inherit; /* Temadaki fontu korur */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-text-block p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Linklerin stilini belirginleştirme */
+.theme-link {
+  color: var(--accent-color, #ff4d4d);
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.theme-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Mobilde güzel görünmesi için */
+@media (min-width: 768px) {
+  .info-box {
+    flex-direction: row; /* Geniş ekranda yan yana */
+  }
+  .info-text-block {
+    flex: 1; /* Eşit genişlikte */
+    padding: 0 1rem;
+    text-align: left;
+  }
+  .info-text-block:first-child {
+    border-right: 1px solid var(--accent-color, #d32f2f); /* Araya çizgi */
+  }
+}
+
+/* Mobilde yazıyı ortala */
+@media (max-width: 767px) {
+  .info-box {
+    text-align: center;
+  }
+}
+  .info-text-block:first-child {
+    border-right: 1px solid var(--accent-color, #d32f2f); /* Araya çizgi */
+  }

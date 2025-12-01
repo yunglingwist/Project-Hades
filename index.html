@@ -8,7 +8,22 @@
   <link id="theme-css" rel="stylesheet" href="css/themes/theme-1990-2010.css" />
 </head>
 <body>
-
+<div id="intro-overlay" class="intro-overlay" style="display: none;">
+  <div class="intro-box">
+    
+    <img src="images/banner.png" alt="Intro Background" class="intro-img">
+    
+   <div class="intro-text">
+      <h2>Welcome to Project HADES</h2>
+      
+      <p>
+        This digital exhibition bridges the award-winning video game <em>Hades</em> with real-world archaeology. 
+        We trace the origins of the game’s mythic artifacts to reveal the genuine history behind the experience.
+      </p>
+      <p class="instruction">(Tap anywhere to begin)</p>
+    </div>
+  </div>
+</div>
   <!-- Header -->
   <header class="site-header">
   <div class="container header-inner">
@@ -69,6 +84,34 @@
         <span style="display: inline-block; margin-left: 8px;">-Zagreus</span></p>
       </div>
     </section>
+
+    </section> 
+
+    <section class="game-info container">
+      <div class="info-box">
+        <div class="info-text-block">
+          <h2>About HADES</h2>
+          <p>
+            <em>Hades</em> is a god-like rogue-like dungeon crawler developed by Supergiant Games. 
+            As the immortal Prince of the Underworld, you'll wield the powers and mythic weapons of Olympus 
+            to break free from the clutches of the god of the dead himself. 
+            For more details, visit the <a href="https://store.steampowered.com/app/1145360/Hades/" target="_blank" class="theme-link">official Steam page</a> 
+            or dive deep into the lore on the <a href="https://hades.fandom.com/wiki/Hades_Wiki" target="_blank" class="theme-link">Hades Wiki</a>.
+          </p>
+        </div>
+
+        <div class="info-text-block">
+          <h3>What is a "Roguelike"?</h3>
+          <p>
+            A <strong>roguelike</strong> is a subgenre of RPGs characterized by procedural generation (randomized levels) 
+            and permanent death. In <em>Hades</em> (often called a "rogue-lite"), death is not the end. 
+            When you die, you restart at the House of Hades, keeping your collected narrative progress and permanent upgrades, 
+            making each escape attempt unique yet interconnected.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="items container">
 
     <section class="items container">
       <div class="items-header"><h2>Featured Items</h2></div>
@@ -149,5 +192,42 @@
   <script src="js/theme-switcher.js"></script>
   <script src="js/header.js"></script>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById('intro-overlay');
+    
+    // KONTROL: Kullanıcı bu oturumda (session) daha önce gördü mü?
+    const hasSeenIntro = sessionStorage.getItem('hades-intro-seen');
+
+    if (!hasSeenIntro) {
+      // 1. Daha önce görmediyse kutuyu GÖSTER
+      overlay.style.display = 'flex';
+      
+      // Tıklama olayını ekle
+      overlay.addEventListener('click', () => {
+        // Efektli kaybolma
+        overlay.style.opacity = '0';
+        
+        // Animasyon bitince tamamen kaldır
+        setTimeout(() => {
+          overlay.style.display = 'none';
+        }, 500);
+
+        // Müzik varsa başlat
+        const bgm = document.getElementById('bgm');
+        if(bgm && bgm.paused) {
+            bgm.play().catch(e => console.log("Audio play prevented:", e));
+        }
+
+        // KAYIT: Kullanıcının gördüğünü tarayıcı hafızasına yaz
+        sessionStorage.setItem('hades-intro-seen', 'true');
+      });
+
+    } else {
+      // 2. Daha önce gördüyse, kutuyu hiç gösterme (Zaten display:none idi)
+      // overlay.style.display = 'none'; // Gerek bile yok ama garanti olsun
+    }
+  });
+</script>
 </body>
 </html>
