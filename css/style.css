@@ -74,7 +74,7 @@ body{
 }
 .header-inner{
   display:flex; align-items:center; gap:28px; padding:14px 0;
-  justify-content: space-between
+  justify-content: space-between;
 }
 .brand{
   font-weight:800; letter-spacing:.6px; text-decoration:none;
@@ -665,4 +665,16 @@ body{
   
   /* Tema değişirken logo da yumuşak geçiş yapsın */
   transition: background-image 0.4s ease;
+}
+/* Mobil Düzeltmesi: Logo çok yer kaplamasın */
+@media (max-width: 768px) {
+  .logo-container {
+    width: 120px; /* Mobilde logo genişliğini 200px'den 120px'e düşürdük */
+    background-position: left center;
+  }
+  
+  /* Eğer hamburger butonun kendi içinde bir margin varsa sıfırlayalım */
+  .nav-toggle {
+    margin: 0; 
+  }
 }
