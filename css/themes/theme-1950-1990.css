@@ -14,6 +14,7 @@
   /* typography */
   --font-text: 'Bangers';
   --font-display: 'Bangers';
+  --header-logo: url('../images/logo4.png')
 }
 /* documentation info */
 .theme-text1::after {

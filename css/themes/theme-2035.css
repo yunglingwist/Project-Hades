@@ -15,6 +15,7 @@
   /* typography */
   --font-text: 'Orbitron';
   --font-display: 'Orbitron';
+  --header-logo: url('../images/logo6.png')
 }
 /* documentation info */
 .theme-text1::after {

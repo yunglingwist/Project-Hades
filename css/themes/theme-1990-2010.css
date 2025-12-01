@@ -15,6 +15,7 @@
   /* typography */
   --font-text: 'Space Mono';
   --font-display: 'Space Mono';
+  --header-logo: url('../images/logo5.png')
 }
 
 /* documentation info */

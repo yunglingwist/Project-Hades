@@ -16,6 +16,7 @@
   /* typography */
   --font-text: 'Poppins';
   --font-display: 'Poppins';
+  --header-logo: url('../images/logo3.png')
 }
 /* documentation info */
 .theme-text1::after {
