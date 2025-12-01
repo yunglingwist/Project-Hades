@@ -984,12 +984,16 @@ function populatePopup(data) {
     document.getElementById('game-relation').textContent = safeText(data.gameRelation);
     
     // Source Link Ayarı (Aynı kalır)
-    const sourceElement = document.getElementById('source');
+   const sourceElement = document.getElementById('source');
     const sourceUrl = data.source ? data.source.url : null;
-    const linkText = data.source && data.source.credit ? data.source.credit : 'View Source';
 
     if (sourceUrl) {
-        sourceElement.innerHTML = `<a href="${sourceUrl}" target="_blank">${linkText}</a>`;
+        const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${encodeURIComponent(sourceUrl)}`;
+        sourceElement.innerHTML = `
+            <a href="${sourceUrl}" target="_blank" title="Scan or Click to go to Museum">
+                <img src="${qrImgUrl}" alt="Source QR" style="display:block; margin: 0 auto; border-radius:4px;">
+            </a>
+        `;
     } else {
         sourceElement.textContent = 'N/A';
     }
