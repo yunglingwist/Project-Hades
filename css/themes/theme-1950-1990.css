@@ -1,12 +1,11 @@
 /* 1950-1990 (Bangers, Pop-art) */
 :root{
-  /* functional color tokens */
-  --color-bg: #FFF200;
-  --color-text: #DC35C7;
+  --color-bg: #fff770;
+  --color-text: #dc35c6;
 
-  --color-accent: #00BFFF;          /* primary accent */
-  --color-accent-border: #0B0C10;   /* border shade */
-  --color-highlight: #F5F5F5;       /* hover tone */
+  --color-accent: #00BFFF;         
+  --color-accent-border: #0B0C10; 
+  --color-highlight: #F5F5F5;      
   --text-muted: #0B0C10;
 
   /* map background*/
