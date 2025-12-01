@@ -102,13 +102,51 @@ function themeSwitch() {
     }, { once: true });
   }
 
+  // **** DEĞİŞİKLİK BURADA: applyTheme fonksiyonuna animasyon eklendi ****
   function applyTheme(theme) {
     const t = THEME_FILES[theme] ? theme : "1990-2010";
 
-    setThemeCss(t);
-    localStorage.setItem(KEY_THEME, t);
-    setPortrait(t);
-    setThemeBgm(t);
+    // 1. Ekranın o anki renginde geçici bir perde (overlay) oluştur
+    const overlay = document.createElement('div');
+    const currentBg = getComputedStyle(document.body).backgroundColor;
+    
+    // Perdenin stilini ayarla
+    Object.assign(overlay.style, {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: currentBg !== 'rgba(0, 0, 0, 0)' ? currentBg : '#111', // Güvenlik için fallback renk
+        zIndex: 9999,
+        pointerEvents: 'none',
+        opacity: 0, // Başlangıçta görünmez
+        transition: 'opacity 0.4s ease' // Geçiş hızı (0.4 saniye)
+    });
+    document.body.appendChild(overlay);
+
+    // 2. Perdeyi yavaşça görünür yap (Fade In) -> Ekran kararır/renklenir
+    requestAnimationFrame(() => {
+        overlay.style.opacity = '1';
+    });
+
+    // 3. Perde tam kapandığında (0.4 sn sonra) asıl değişikliği yap
+    setTimeout(() => {
+        setThemeCss(t);
+        localStorage.setItem(KEY_THEME, t);
+        setPortrait(t);
+        setThemeBgm(t);
+
+        // 4. Yeni tema CSS'i yüklendikten sonra perdeyi kaldır (Fade Out)
+        setTimeout(() => {
+            overlay.style.opacity = '0';
+            // Animasyon bitince DOM'dan tamamen sil
+            setTimeout(() => {
+                if(overlay.parentNode) overlay.parentNode.removeChild(overlay);
+            }, 400); 
+        }, 150); // CSS'in tarayıcı tarafından işlenmesi için minik bir gecikme
+        
+    }, 400); // Fade In süresi ile eşleşmeli
   }
 
   // ---------- BGM QoL: ses & zaman ----------
@@ -172,9 +210,15 @@ function themeSwitch() {
 
   // ---------- İlk yükleme + select değişimi ----------
 
+  // Sayfa ilk açıldığında animasyonsuz yüklemek için direkt fonksiyonları çağırabilirsin
+  // Ama "applyTheme" kullanırsan sayfa açılışında da hoş bir fade-in efekti olur.
   const savedTheme = localStorage.getItem(KEY_THEME) || '1990-2010';
   if (select) select.value = savedTheme;
-  applyTheme(savedTheme);
+  
+  // İlk açılışta animasyon istemiyorsan burayı şöyle değiştirebilirsin:
+  // setThemeCss(savedTheme); localStorage.setItem(KEY_THEME, savedTheme); setPortrait(savedTheme); setThemeBgm(savedTheme);
+  // Ama mevcut haliyle bırakırsan sayfa açılırken de efekt verir:
+  setThemeCss(savedTheme); localStorage.setItem(KEY_THEME, savedTheme); setPortrait(savedTheme); setThemeBgm(savedTheme);
 
   // Autoplay kolunu kur
   armAutoplay();
