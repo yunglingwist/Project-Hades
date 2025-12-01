@@ -559,11 +559,28 @@ body{
   margin-bottom: 3rem;
 }
 
+/* --- Game Info Section --- */
+.game-info {
+  margin: 3rem auto;
+}
+
+/* --- Game Info Section --- */
+.game-info {
+  margin: 3rem auto;
+}
+
 .info-box {
-  /* Temadan gelen değişkenleri kullanıyoruz, yoksa varsayılan renkler devreye girer */
-  background-color: var(--card-bg, rgba(20, 20, 20, 0.8)); 
-  border: 2px solid var(--accent-color, #d32f2f);
-  color: var(--text-color, #fff);
+  /* Temandaki değişken isimlerini buraya eşleştirdim: */
+  
+  /* --card-bg yoktu, --color-bg kullandık. Eğer çok koyu olursa rgba ile açabiliriz */
+  background-color: var(--color-bg, #172639); 
+  
+  /* Kenarlık için temandaki --color-highlight'ı kullandım */
+  border: 2px solid var(--color-highlight, #926D33);
+  
+  /* Yazı rengi için --color-text */
+  color: var(--color-text, #CB9323);
+  
   padding: 2rem;
   border-radius: 8px;
   display: flex;
@@ -574,52 +591,62 @@ body{
 
 .info-text-block h2, 
 .info-text-block h3 {
-  color: var(--accent-color, #d32f2f);
+  /* Başlıklar için vurgu rengi: --color-accent */
+  color: var(--color-accent, #D5C2A2);
   margin-bottom: 1rem;
-  font-family: inherit; /* Temadaki fontu korur */
+  font-family: var(--font-display, inherit); /* Fontu da temadan çekelim */
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .info-text-block p {
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  /* Düz yazı fontunu da temadan çekelim */
+  font-family: var(--font-text, inherit); 
 }
 
-/* Linklerin stilini belirginleştirme */
+/* Link stilleri */
 .theme-link {
-  color: var(--accent-color, #ff4d4d);
+  color: var(--color-accent, #D5C2A2);
   text-decoration: underline;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .theme-link:hover {
-  color: #fff;
+  filter: brightness(1.2);
   text-decoration: none;
+  color: var(--color-highlight, #926D33);
 }
 
-/* Mobilde güzel görünmesi için */
+/* --- Responsive Ayarlar (Aynı kalabilir) --- */
 @media (min-width: 768px) {
   .info-box {
-    flex-direction: row; /* Geniş ekranda yan yana */
+    flex-direction: row;
+    align-items: flex-start;
   }
+  
   .info-text-block {
-    flex: 1; /* Eşit genişlikte */
-    padding: 0 1rem;
+    flex: 1;
+    padding: 0 1.5rem;
     text-align: left;
   }
+  
   .info-text-block:first-child {
-    border-right: 1px solid var(--accent-color, #d32f2f); /* Araya çizgi */
+    border-right: 1px solid var(--color-highlight, #926D33);
   }
 }
 
-/* Mobilde yazıyı ortala */
 @media (max-width: 767px) {
   .info-box {
     text-align: center;
   }
-}
+
   .info-text-block:first-child {
-    border-right: 1px solid var(--accent-color, #d32f2f); /* Araya çizgi */
+    border-right: none;
+    border-bottom: 1px solid var(--color-highlight, #926D33);
+    padding-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
   }
+}
