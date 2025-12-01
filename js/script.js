@@ -819,61 +819,54 @@ const CHRONOLOGICAL_ORDER = [
     "minotaur"
 ];
 
-// ====================================================================
-// 1. GLOBAL DEĞİŞKENLER VE SABİTLER
-// ====================================================================
-
-// ** NOT: DATA_STORE objesi bu dosyada tanımlı DEĞİLDİR. Harici bir 'data.js' veya benzeri dosyadan geldiği varsayılır. **
+// 1. GLOBAL VARIABLES AND CONSTANTS
 
 let currentItemId = null; 
 
-// Seviye kontrol sabitleri
-const contentLevels = ['simple', 'complex']; // İçerik seviyeleri (Örn: Kısa/Uzun)
-const languageLevels = ['simple', 'complex']; // Dil seviyeleri (Örn: Basit/Akademik)
+// LEVEL CONTROLS
+const contentLevels = ['simple', 'complex'];
+const languageLevels = ['simple', 'complex'];
 
-// Başlangıç indeksleri (simple-simple)
+// START INDEXES
 let currentContentIndex = 0; 
 let currentLanguageIndex = 0; 
 
-// ====================================================================
-// 2. YARDIMCI FONKSİYONLAR
-// ====================================================================
+// 2. ADDITIONAL FUNCTIONS
 
-// Güvenli metin atama yardımcısı (null/undefined yerine 'N/A' döner)
+// null/undefined --> 'N/A'
 const safeText = (value) => value || 'N/A';
 
-// Buton göstergelerini (Simple/Complex) günceller
+// Update Buttons (Simple/Complex)
 function updateControlIndicators() {
     const contentIndicator = document.getElementById('content-level-indicator');
     const languageIndicator = document.getElementById('language-level-indicator');
     
-    // CONTENT göstergesini güncelle
+    // Update Content Indicator
     if (contentIndicator) {
-        // İlk harfi büyük yapar
         const contentText = contentLevels[currentContentIndex].charAt(0).toUpperCase() + contentLevels[currentContentIndex].slice(1);
         contentIndicator.textContent = contentText;
     }
     
-    // LANGUAGE göstergesini güncelle
+    // Update Language Indicator
     if (languageIndicator) {
         const languageText = languageLevels[currentLanguageIndex].charAt(0).toUpperCase() + languageLevels[currentLanguageIndex].slice(1);
         languageIndicator.textContent = languageText;
     }
 }
 
-// Butonları grileştirmek için yer tutucu fonksiyon (ileride kullanılabilir)
+// Disable function
 function updateControlButtons(type) {
-    // Örneğin: Plus butonu complex seviyesindeyse disabled yapma mantığı buraya gelir.
+
 }
 
-// Pop-up Kapatma İşlevi
+// Pop-up Close
 function closePopup() {
     const overlay = document.querySelector('.background-overlay');
     if (overlay) overlay.style.display = 'none';
     document.body.style.overflow = '';
 }
 
-// Görsel Yükleme İşlevi
+// Upload Image
 function loadMedia(container, mediaItem, defaultTitle) {
     if (container) {
         container.innerHTML = ''; 
@@ -899,15 +892,14 @@ function loadMedia(container, mediaItem, defaultTitle) {
     }
 }
 
-// ====================================================================
-// 3. ANA İŞLEVLER (VERİ VE GÖRÜNÜM)
-// ====================================================================
 
-// Açıklama metnini günceller (CONTENT ve LANGUAGE seviyelerine göre)
+// 3. MAIN FUNCTIONS (DATA AND VIEW)
+
+// Update description
 function updateDescription(itemId) {
     const data = DATA_STORE[itemId];
     
-    // Dinamik anahtar oluşturma: Örn: 'simple-complex'
+    // Dynamic create key
     const contentKey = contentLevels[currentContentIndex];   
     const languageKey = languageLevels[currentLanguageIndex]; 
     const key = `${contentKey}-${languageKey}`; 
@@ -916,7 +908,7 @@ function updateDescription(itemId) {
     const extraDescriptionText = document.getElementById('extra-description-text');
     const showMoreButton = document.getElementById('btn-show-more'); 
 
-    // Hata Kontrolü
+    // Error control
     if (!data || !data.descriptions) {
         descriptionElement.textContent = `ERROR: Data or descriptions object missing for item: ${itemId}.`;
         extraDescriptionText.textContent = '';
@@ -927,17 +919,17 @@ function updateDescription(itemId) {
     const mainText = data.descriptions[key];
     const extraText = data.extra_descriptions ? data.extra_descriptions[key] : '';
     
-    // 1. ANA AÇIKLAMAYI YÜKLE
+    // 1. Upload main description
     if (mainText) {
         descriptionElement.textContent = mainText;
     } else {
         descriptionElement.textContent = `ERROR: Key '${key}' not found or empty for ${itemId}.`; 
     }
     
-    // 2. EKSTRA METNİ YÜKLE
+    // 2. Upload extra description
     extraDescriptionText.textContent = extraText || '';
 
-    // 3. EK METİN VE BUTON YÖNETİMİ (SIFIRLAMA)
+    // 3. EXTRA TEXT AND BUTTONS (RESET)
     if (!extraText) {
         if(showMoreButton) showMoreButton.style.display = 'none';
     } else {
@@ -950,17 +942,15 @@ function updateDescription(itemId) {
     }
 }
 
-// Pop-up içeriğini doldurur
+// Fill pop-up
 function populatePopup(data) {
     
-    // Info Box'ları Doldur
+    // Fill info-box
     document.querySelector('.item-name-title').textContent = safeText(data.title);
     
-    // Temel Bilgiler
+    // Main info
     document.getElementById('id').textContent = safeText(data.id);
     document.getElementById('title').textContent = safeText(data.title);
-    
-    // **** EKSİK OLAN ATAMALAR BURADA BAŞLIYOR ****
     document.getElementById('type').textContent = safeText(data.type);
     document.getElementById('material').textContent = safeText(data.material);
     document.getElementById('date').textContent = safeText(data.date);
@@ -968,9 +958,8 @@ function populatePopup(data) {
     document.getElementById('museum').textContent = safeText(data.museum);
     document.getElementById('accession-number').textContent = safeText(data.accessionNumber);
     document.getElementById('provenance').textContent = safeText(data.provenance);
-    // **** EKSİK OLAN ATAMALAR BURADA BİTİYOR ****
     
-    // Dimensions (Özel durum, birleştirme gerektirir)
+    // Dimensions
     const dimensionsText = data.dimensions 
         ? `H: ${safeText(data.dimensions.height)} W: ${safeText(data.dimensions.width)} D: ${safeText(data.dimensions.depth)}` 
         : 'N/A';
@@ -983,7 +972,7 @@ function populatePopup(data) {
     // Game Relation
     document.getElementById('game-relation').textContent = safeText(data.gameRelation);
     
-    // Source Link Ayarı (Aynı kalır)
+    // Source Link
    const sourceElement = document.getElementById('source');
     const sourceUrl = data.source ? data.source.url : null;
 
@@ -998,14 +987,14 @@ function populatePopup(data) {
         sourceElement.textContent = 'N/A';
     }
 
-    // Görsel Yükleme (Aynı kalır)
+    // Image Upload
     const realMedia = data.media ? data.media.find(m => m.type === 'real') : null;
     loadMedia(document.getElementById('real-img'), realMedia, data.title);
     
     const gameMedia = data.media ? data.media.find(m => m.type === 'game') : null;
     loadMedia(document.getElementById('game-img'), gameMedia, data.title);
     
-    // Açıklamayı Yükle
+    // Description Upload
     if (currentItemId) {
         updateDescription(currentItemId); 
     }
@@ -1014,15 +1003,14 @@ function populatePopup(data) {
 function resetAndPopulate(itemId) {
     currentItemId = itemId;
     
-    // Pop-up içeriğini temiz seviyelerle doldur
-    currentContentIndex = 0; // Seviyeyi Simple'a sıfırla
-    currentLanguageIndex = 0; // Seviyeyi Simple'a sıfırla
+    currentContentIndex = 0; 
+    currentLanguageIndex = 0;
     
     populatePopup(DATA_STORE[itemId]);
-    updateControlIndicators(); // Sıfırlamayı yansıt
+    updateControlIndicators();
 }
 
-// Sonraki/Önceki Öğeye Geçiş İşlevi
+// Next/Previous
 function handleItemNavigation(direction) {
     if (!currentItemId) return;
 
@@ -1030,11 +1018,9 @@ function handleItemNavigation(direction) {
     let newIndex;
 
     if (direction === 'next') {
-        // Döngüsel geçiş (son öğeden sonra başa döner)
+        // Reset from last to start
         newIndex = (currentIndex + 1) % CHRONOLOGICAL_ORDER.length;
     } else if (direction === 'prev') {
-        // Döngüsel geçiş (ilk öğeden önce sona döner)
-        // JavaScript'teki negatif modül sorununu çözmek için '+ CHRONOLOGICAL_ORDER.length' eklenir
         newIndex = (currentIndex - 1 + CHRONOLOGICAL_ORDER.length) % CHRONOLOGICAL_ORDER.length;
     } else {
         return;
@@ -1049,7 +1035,7 @@ function handleItemNavigation(direction) {
         if (formContainer) {
             formContainer.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Yumuşak geçiş için
+                behavior: 'smooth'
             });
         }
         
@@ -1058,7 +1044,7 @@ function handleItemNavigation(direction) {
     
 }
 
-// Açma İşlevi
+// Open pop-up
 function openPopup(event) {
     const overlay = document.querySelector('.background-overlay');
     const rawId = event.currentTarget.id; 
@@ -1078,11 +1064,11 @@ function openPopup(event) {
 
         populatePopup(data);
         
-        // **** ÖNEMLİ: Pop-up açılırken seviye göstergelerini sıfırla/güncelle ****
+        // Reset pop-up
         updateControlIndicators(); 
-        currentContentIndex = 0; // Pop-up açıldığında seviyeyi Simple'a sıfırla
-        currentLanguageIndex = 0; // Pop-up açıldığında seviyeyi Simple'a sıfırla
-        updateControlIndicators(); // Sıfırlamayı yansıt
+        currentContentIndex = 0;
+        currentLanguageIndex = 0;
+        updateControlIndicators();
         
         overlay.style.display = 'flex'; 
         document.body.style.overflow = 'hidden';
@@ -1093,11 +1079,9 @@ function openPopup(event) {
     }
 }
 
-// ====================================================================
-// 4. ETKİLEŞİM İŞLEVLERİ (Buton Tıklamaları)
-// ====================================================================
+// 4. INTERACTION FUNCTIONS (BUTTONS)
 
-// Show More / Show Less işlevi
+// Show More / Show Less
 function handleShowMoreClick() {
     const showMoreButton = document.getElementById('btn-show-more');
     const extraDescriptionText = document.getElementById('extra-description-text');
@@ -1115,7 +1099,7 @@ function handleShowMoreClick() {
     }
 }
 
-// CONTENT +/- işlevi
+// CONTENT +/-
 function handleContentChange(direction) {
     let newIndex = currentContentIndex;
     
@@ -1129,7 +1113,7 @@ function handleContentChange(direction) {
         currentContentIndex = newIndex;
         
         updateControlButtons('content'); 
-        updateControlIndicators(); // Göstergeyi güncelle
+        updateControlIndicators();
         
         if (currentItemId) {
             updateDescription(currentItemId);
@@ -1137,7 +1121,7 @@ function handleContentChange(direction) {
     }
 }
 
-// LANGUAGE +/- işlevi
+// LANGUAGE +/-
 function handleLanguageChange(direction) {
     let newIndex = currentLanguageIndex;
     
@@ -1151,7 +1135,7 @@ function handleLanguageChange(direction) {
         currentLanguageIndex = newIndex;
         
         updateControlButtons('language'); 
-        updateControlIndicators(); // Göstergeyi güncelle
+        updateControlIndicators();
         
         if (currentItemId) {
             updateDescription(currentItemId);
@@ -1160,31 +1144,29 @@ function handleLanguageChange(direction) {
 }
 
 
-// ====================================================================
-// 5. EVENT LISTENERS (DOM Yüklendiğinde Başlat)
-// ====================================================================
+// 5. EVENT LISTENERS
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Element Seçimleri
+    // 1. Element Selections
     const openButtons = document.querySelectorAll('.item-button'); 
     const closeButton = document.querySelector('.close-button'); 
     const showMoreButton = document.getElementById('btn-show-more');
     const markerButtons = document.querySelectorAll('.marker-buttons'); 
     
-    // Control Butonları
+    // Control Buttons
     const contentPlus = document.querySelector('.control-group:nth-child(1) .plus-button');
     const contentMinus = document.querySelector('.control-group:nth-child(1) .minus-button');
     const languagePlus = document.querySelector('.control-group:nth-child(2) .plus-button');
     const languageMinus = document.querySelector('.control-group:nth-child(2) .minus-button');
 
 
-    const prevButton = document.querySelector('.back-button'); // <--- .back-button ile eşleşir
-    const nextButton = document.querySelector('.next-button'); // <--- .next-button ile eşleşir
+    const prevButton = document.querySelector('.back-button');
+    const nextButton = document.querySelector('.next-button');
     
-    // 2. Olay Dinleyicilerini Bağlama
+    // 2. Connect Event Listeners
     
-    // Pop-up Açma
+    // Pop-up open
     openButtons.forEach(button => {
         button.addEventListener('click', openPopup);
     });
@@ -1192,7 +1174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     markerButtons.forEach(button => {
         button.addEventListener('click', openPopup);
     });
-    // Pop-up Kapatma
+    // Pop-up close
     if (closeButton) {
         closeButton.addEventListener('click', closePopup);
     }
@@ -1202,7 +1184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showMoreButton.addEventListener('click', handleShowMoreClick); 
     }
 
-    // Content +/- Butonları
+    // Content +/-
     if (contentPlus) {
         contentPlus.addEventListener('click', () => handleContentChange('plus'));
     }
@@ -1210,7 +1192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contentMinus.addEventListener('click', () => handleContentChange('minus'));
     }
 
-    // Language +/- Butonları
+    // Language +/-
     if (languagePlus) {
         languagePlus.addEventListener('click', () => handleLanguageChange('plus'));
     }
@@ -1219,15 +1201,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (prevButton) {
-        // back-button = 'prev' yönü
         prevButton.addEventListener('click', () => handleItemNavigation('prev'));
     }
     if (nextButton) {
-        // next-button = 'next' yönü
         nextButton.addEventListener('click', () => handleItemNavigation('next'));
     }
 
-    // ESC ve Overlay tıklaması
+    // ESC and Overlay
     const overlay = document.querySelector('.background-overlay');
     if (overlay) {
         document.addEventListener('keydown', (event) => {
