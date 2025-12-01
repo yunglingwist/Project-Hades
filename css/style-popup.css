@@ -152,43 +152,51 @@ body {
     padding: 10px;
 }
 
+/* INFO BOX (KÜÇÜK KUTULAR) */
 .info-box.small {
     background-color: var(--color-bg); 
     color: var(--color-text);
-    padding: 6px 10px;
+    padding: 8px 10px; /* İç boşluk dengelendi */
     border-radius: 8px;
 
     display: flex;
     flex-direction: column;
     text-align: left;
+    
+    /* İÇERİK HİZALAMA */
+    justify-content: flex-start; /* İçeriği yukarı yasla */
+    gap: 4px; /* Başlık ve metin arasında sadece 4px boşluk olsun */
 
-    justify-content: start; 
-
-    max-height: none;
-
+    min-height: 50px; /* Minimum yükseklik */
+    height: auto; /* İçeriğe göre uzasın */
     overflow: visible;
 }
 
+/* KUTU BAŞLIĞI (LABEL) */
 .info-box.small label {
     color: var(--color-accent);
-    font-size: 9px;
+    font-size: 10px; /* Biraz daha okunaklı */
     font-weight: 700;
     text-transform: uppercase;
-    opacity: 0.7; 
-    margin-bottom: 0;
+    opacity: 0.8; 
+    
+    margin: 0; /* Dış boşlukları sıfırla */
+    line-height: 1; /* Satır yüksekliğini sıkılaştır */
 }
 
+/* KUTU İÇERİĞİ (METİN) */
 .info-box.small p.text {
     color: var(--color-text); 
     font-size: 13px;
     font-weight: 500;
-    line-height: 1.2;
-    margin: 0;
-
+    line-height: 1.2; /* Okunabilir satır aralığı */
+    height: auto;
+    
+    margin: 0; /* Dış boşlukları sıfırla */
+    
+    /* Metin davranışı */
     white-space: normal; 
-    overflow: visible;
-    text-overflow: clip;
-    height:max-content;
+    word-break: break-word; /* Uzun kelimeleri (URL gibi) kır */
 }
 
 .description-row {
