@@ -5,9 +5,9 @@
 body {
     margin: 0;
     padding: 0;
-    /* DEĞİŞİKLİK: Tema rengini kullan */
+
     background-color: var(--color-bg);
-    /* DEĞİŞİKLİK: Tema metin rengini kullan */
+
     color: var(--color-bg); 
     min-height: 100vh;
     display: flex;
@@ -20,9 +20,9 @@ body {
     display: flex;
     flex-direction: column;
 }
-/* ======================================================================== */
-/* IZGARA DÜZENİ - ÇÖZÜM UYGULANMIŞTIR */
-/* ======================================================================== */
+
+/* GRID LAYOUT */
+
 .grid-layout {
     display: grid;
     grid-template-columns: 300px repeat(3, 1fr); 
@@ -33,11 +33,10 @@ body {
     align-items: center; 
 }
 
-/* Sol Taraftaki Başlık Kutuları */
+
 .row-title {
-    /* DEĞİŞİKLİK: Tema vurgu rengini kullan */
+
     background-color: var(--color-accent);
-    /* DEĞİŞİKLİK: Tema metin rengini kullan */
     color: var(--color-bg); 
     
     height: 111px;
@@ -53,7 +52,7 @@ body {
     grid-column: 1 / 2; 
 }
 
-/* Her Bir Öğe Kutusu (Daire + Buton) */
+
 .grid-item {
     display: flex;
     flex-direction: column;
@@ -62,7 +61,7 @@ body {
     padding: 10px;
 }
 
-/* Üstteki Gri Daire */
+
 .item-circle {
     width: 60px;
     height: 60px;
@@ -76,7 +75,7 @@ body {
     overflow: hidden; 
 }
 
-/* Doğrudan HTML'e eklenen WebP ikonu için stil */
+
 .item-icon {
     display: block;
     width: 100%; 
@@ -84,11 +83,10 @@ body {
     object-fit: contain; 
 }
 
-/* Butonlar */
+/* BUTTONS */
 .item-button {
-    /* DEĞİŞİKLİK: Tema vurgu rengini kullan */
+
     background-color: var(--color-accent);
-    /* DEĞİŞİKLİK: Tema metin rengini kullan */
     color: var(--color-bg);
     border: none;
     padding: 8px 15px;
@@ -103,18 +101,12 @@ body {
 }
 
 .item-button:hover {
-    /* DEĞİŞİKLİK: Hover rengi için tema accent-dark veya highlight kullanılabilir. */
-    /* Ancak şimdilik sabit değeri tema değişkenleriyle değiştiriyorum. */
-    background-color: var(--color-highlight, #f1b369); /* Fallback ile tema değişkenini kullan */
+    background-color: var(--color-highlight, #f1b369); 
 }
 
-/* ======================================================================== */
-/* ALT BANT (COPYRIGHT) */
-/* ======================================================================== */
+/* COPYRIGHT */
 .copyright-bar {
-    /* DEĞİŞİKLİK: Tema vurgu rengini kullan */
     background-color: var(--color-accent);
-    /* DEĞİŞİKLİK: Tema metin rengini kullan */
     color: var(--color-bg);
     text-align: center;
     padding: 15px 0;
@@ -124,9 +116,7 @@ body {
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* ======================================================================== */
-/* RESPONSIVE DÜZENLEME (Küçük Ekranlar İçin) */
-/* ======================================================================== */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
     .grid-layout {
@@ -141,7 +131,6 @@ body {
 }
 
 @media (max-width: 600px) {
-    /* Mobil: Tek sütun yapısı ve diğer mobil düzeltmeleri aynı kalır */
     .grid-layout {
         grid-template-columns: 1fr; 
         gap: 5px;
@@ -171,4 +160,5 @@ body {
         flex-grow: 1; 
         text-align: left;
     }
+
 }
