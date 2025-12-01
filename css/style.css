@@ -312,6 +312,10 @@ body {
 .theme-text2::after { content: "Default text"; color: var(--color-bg); }
 #theme-image { width: 100%; max-width: 600px; height: auto; display: block; }
 
+.doc-img {
+  max-width: 300px;   
+  height: auto;
+}
 
 /* 8. GAME INFO SECTION (Special Info Box) */
 .game-info {

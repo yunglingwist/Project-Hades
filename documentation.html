@@ -78,10 +78,10 @@
       <p>The exhibition page required a more technical layout solution. Unlike the map, this page needed to support many objects presented in repeatable format. Person2 designed a card-based system: image on the left, metadata on the right, expandable sections beneath. Flexbox was used instead of strict grid since it handles variable content better. Each card was assigned padding and maximum width constraints so images didn't stretch or pixelate at large resolutions. A challenge was balancing text volume — especially in historical & narrative descriptions — so collapsible toggles were implemented to prevent scrolling fatigue and keep the layout visually level between entries. </p>
       <p>This page became the most content-dense section of the project, and the layout choices reflect that: structured, repeatable, reliable.</p>
       <h3>Ceyda: Documentation Page, moodboard & stylization </h3>
-      <img src="images/layoutsketch.png" alt="Sketches for layout" style="max-width:100%; height:auto; display:block;">
+      <img class="doc-img" src="images/layoutsketch.png" alt="Sketches for layout">
       <p>Handled the documentation page, meaning they had to present text-heavy content while keeping it readable and non-static. A two-column layout was chosen for desktop screens: text on one side, visual development materials on the other (sketches, notes, iterations). For mobile, the layout collapses into a stacked sequence to maintain legibility. The goal was transparency — to show how the project was built, not only the end result.</p>
+      <img class="doc-img" src="images/figma.png" alt="Figma moodboard">
       <p>Also built the moodboard and set global style direction. We used <a href="https://www.figma.com/design/AaZ6v9pzqjPsSAlEdAXSyS/hadesproject?node-id=0-1&t=SzaswLXy5vmjv54M-1">Figma</a>. The palette was inspired by Hades: charcoal #1a1a1a for the underworld, muted gold for accents, and a high-contrast serif font for titles to echo ancient inscriptional aesthetics. CSS variables were later introduced to unify these style decisions across contributors. This prevented color drift and ensured that page-level visuals felt cohesive even though multiple people worked separately. The stylization step effectively became the visual anchor for the entire project.</p>
-      <img src="images/figma.png" alt="Figma moodboard" style="max-width:100%; height:auto; display:block;">
       <h3>Yigit: Map Page & Disclaimer Page</h3>
       <p>The map page was structured as the core navigation interface of the digital museum. Instead of relying on a standard menu, person1 created a spatial layout inspired by the branching rooms of Hades. CSS grid was used to define a multi-cell area where each exhibition room could be positioned visually rather than linearly. This approach gave full control over spacing and scale, allowing rooms to occupy varying grid spans depending on their importance or volume of displayed material. One design challenge was balancing grid density with readability — early tests left too much empty space — so the grid was expanded and room nodes scaled up to support clarity. </p>
       <p>Room markers respond on hover, revealing the item associated with each exhibition area. The intention was to simulate walking through a real museum, where you don’t see everything at once — discovery happens through movement. The hover interaction helps guide users without overwhelming them visually. </p>
@@ -126,33 +126,7 @@
     <div class="container">© Project HADES</div>
   </footer>
 
- <!-- Theme Switcher -->
-  <script>
-    (function () {
-      const KEY = 'projecthades-theme';
-      const linkEl = document.getElementById('theme-css');
-      const select = document.getElementById('theme');
-
-      const THEME_FILES = {
-        "1500-1800":        "css/themes/theme-1500-1800.css",
-        "1800s":     "css/themes/theme-1800.css",
-        "1900-1950":  "css/themes/theme-1900-1950.css",
-        "1950-1990": "css/themes/theme-1950-1990.css",
-        "1990-2010":        "css/themes/theme-1990-2010.css",
-        "2035":             "css/themes/theme-2035.css"
-      };
-
-      function applyTheme(val){
-        const href = THEME_FILES[val] || THEME_FILES["1990-2010"];
-        linkEl.setAttribute('href', href);
-        localStorage.setItem(KEY, val);
-      }
-
-      const saved = localStorage.getItem(KEY) || '1990-2010';
-      select.value = saved;
-      applyTheme(saved);
-      select.addEventListener('change', e => applyTheme(e.target.value));
-    })();
+ 
   </script>
   <script src="js/header.js"></script>
   <script src="js/theme-switcher.js"></script>
