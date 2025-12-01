@@ -11,28 +11,42 @@
 
   <!-- Header -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="images/HadesLogoRed.png" alt="Hades Logo" /></a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="exhibition.html">Exhibition</a>
-        <a href="map.html">Map</a>
-        <a href="documentation.html" class="active">Documentation</a>
-        <a href="disclaimer.html">Disclaimer</a>
-      </nav>
-      <div class="theme-select">
-        <label for="theme" class="visually-hidden">Theme</label>
-        <select id="theme">
-          <option value="1500-1800">1500–1800</option>
-          <option value="1800s">1800s</option>
-          <option value="1900-1950">1900-1950</option>
-          <option value="1950-1990">1950-1990</option>
-          <option value="1990-2010">1990–2010</option>
-          <option value="2035">2035</option>
-        </select>
-      </div>
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html">
+      <img src="images/HadesLogoRed.png" alt="Hades Logo" />
+    </a>
+
+    <!-- HAMBURGER -->
+    <button class="nav-toggle" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- NORMAL MENÜ -->
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="exhibition.html">Exhibition</a>
+      <a href="map.html">Map</a>
+      <a href="documentation.html">Documentation</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+
+    <!-- Theme Selector -->
+    <div class="theme-select">
+      <label for="theme" class="visually-hidden">Theme</label>
+      <select id="theme">
+        <option value="1500-1800">1500–1800</option>
+        <option value="1800s">1800s</option>
+        <option value="1900-1950">1900–1950</option>
+        <option value="1950-1990">1950–1990</option>
+        <option value="1990-2010" selected>1990–2010</option>
+        <option value="2035">2035</option>
+      </select>
     </div>
-  </header>
+
+  </div>
+</header>
+
 
   <!-- Team -->
 <section class="team-section">
@@ -136,5 +150,6 @@
       select.addEventListener('change', e => applyTheme(e.target.value));
     })();
   </script>
+  <script src="js/header.js"></script>
 </body>
 </html>
