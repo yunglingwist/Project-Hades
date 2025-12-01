@@ -392,8 +392,9 @@ body{
 /*Theme image*/
 #theme-image {
   width: 100%;
-  max-width: 800px;  /* you can adjust */
+  max-width: 600px;  /* you can adjust */
   height: auto;
+  display: block;
 }
 
 /* ========== RESPONSIVE NAVBAR ========== */
