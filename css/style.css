@@ -109,7 +109,7 @@ body{
   display:grid; grid-template-columns: 1.1fr .9fr; gap:24px;
   padding:36px 0 20px;
 }
-.hero-copy h1{ margin:.2rem 0 1rem; font-size:28px; color: var(--color-text); }
+.hero-copy h1{ margin:.2rem 0 1rem; font-size:28px; color: var(--color-text); justify-content: center; }
 .hero-copy .lead{ color: var(--text-muted); max-width:44ch; }
 .hero-art{ display:flex; justify-content: center; align-items:flex-start; }
 .hero-art img{ max-width:320px; height:auto; display:block; }
@@ -243,8 +243,9 @@ body{
 
 /* ========= Responsive ========= */
 @media (max-width: 880px){
-  .hero{ grid-template-columns:1fr; text-align:left; }
-  .hero-art{ justify-content:flex-start; }
+  .hero{ grid-template-columns:1fr; text-align:center; }
+  .hero-art{ justify-content:space-evenly; }
+  .panel-body{ justify-content:space-evenly; }
 }
 
 /* ========= Team section ========= */
