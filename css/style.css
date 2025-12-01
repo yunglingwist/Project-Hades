@@ -2,6 +2,7 @@
 :root{
   /* layout */
   --max: 1100px;
+  --header-height: 80px;
   --radius: 10px;
   --marker-size: clamp(32px, 4vw, 60px);
 
@@ -73,6 +74,7 @@ body{
 }
 .header-inner{
   display:flex; align-items:center; gap:28px; padding:14px 0;
+  justify-content: space-between
 }
 .brand{
   font-weight:800; letter-spacing:.6px; text-decoration:none;
@@ -109,7 +111,7 @@ body{
 }
 .hero-copy h1{ margin:.2rem 0 1rem; font-size:28px; color: var(--color-text); }
 .hero-copy .lead{ color: var(--text-muted); max-width:44ch; }
-.hero-art{ display:flex; justify-content:center; align-items:flex-start; }
+.hero-art{ display:flex; justify-content: center; align-items:flex-start; }
 .hero-art img{ max-width:320px; height:auto; display:block; }
 
 /* ========= Carousel (cards) ========= */
