@@ -650,3 +650,19 @@ body{
     margin-bottom: 0.5rem;
   }
 }
+/* LOGO CONTAINER */
+.logo-container {
+  width: 200px; /* Logonun sığacağı genişlik */
+  height: 60px; /* Header yüksekliğine uygun yükseklik */
+  
+  /* Logoyu değişken olarak alıyoruz */
+  background-image: var(--header-logo);
+  
+  /* Resmi kutuya sığdır ve tekrar etme */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center; /* Sola hizala */
+  
+  /* Tema değişirken logo da yumuşak geçiş yapsın */
+  transition: background-image 0.4s ease;
+}

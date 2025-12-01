@@ -7,7 +7,7 @@ function themeSwitch() {
   const select      = document.getElementById('theme');
   const portraitImg = document.querySelector('.hero-art img');
 
-  // Tema CSS dosyaları
+  // Configuration - Sadece CSS dosyalarını tutuyoruz
   const THEME_FILES = {
     "1500-1800": "css/themes/theme-1500-1800.css",
     "1800s":     "css/themes/theme-1800.css",
@@ -17,7 +17,7 @@ function themeSwitch() {
     "2035":      "css/themes/theme-2035.css"
   };
 
-  // Portre görselleri
+  // Portreler (Header logosu artık CSS'te, buraya gerek yok)
   const PORTRAIT_FILES = {
     "1500-1800": "images/PortraitZagreus.webp",
     "1800s":     "images/PortraitZagreus2.png",
@@ -27,7 +27,6 @@ function themeSwitch() {
     "2035":      "images/PortraitZagreus6.jpg"
   };
 
-  // Tema -> müzik dosyası
   const THEME_BGM = {
     "1500-1800": "audio/1500-1800.mp3",
     "1800s":     "audio/1800s.mp3",
@@ -37,7 +36,7 @@ function themeSwitch() {
     "2035":      "audio/2035.mp3"
   };
 
-  // Sayfada audio elementi yoksa oluştur
+  // Init Audio
   let audioEl = document.getElementById('bgm');
   if (!audioEl) {
     audioEl = document.createElement('audio');
@@ -48,25 +47,22 @@ function themeSwitch() {
     document.body.appendChild(audioEl);
   }
 
-  // ---------- Yardımcılar ----------
+  // --- Helpers ---
 
   function setPortrait(theme) {
     if (!portraitImg) return;
     const file = PORTRAIT_FILES[theme] || PORTRAIT_FILES["1990-2010"];
-
-    if (!portraitImg.style.transition) {
-      portraitImg.style.transition = 'opacity .25s ease';
-    }
-
+    if (!portraitImg.style.transition) portraitImg.style.transition = 'opacity .25s ease';
+    
     const tmp = new Image();
-    portraitImg.style.opacity = '0';
-    tmp.onload = () => {
-      portraitImg.src = file;
-      requestAnimationFrame(() => {
-        portraitImg.style.opacity = '1';
-      });
-    };
     tmp.src = file;
+    tmp.onload = () => {
+        portraitImg.style.opacity = '0';
+        setTimeout(() => {
+            portraitImg.src = file;
+            portraitImg.style.opacity = '1';
+        }, 250);
+    };
   }
 
   function setThemeCss(theme) {
@@ -76,88 +72,74 @@ function themeSwitch() {
 
   function setThemeBgm(theme) {
     if (!audioEl) return;
-
     const src = THEME_BGM[theme] || THEME_BGM["1990-2010"];
     const wasPlaying  = !audioEl.paused && !audioEl.ended;
     const resumePoint = audioEl.currentTime || parseFloat(localStorage.getItem(KEY_BGM_POS) || '0') || 0;
 
-    // Aynı parça zaten yüklüyse boşuna resetleme
-    if (audioEl.src && audioEl.src.includes(src)) {
-      return;
-    }
+    if (audioEl.src && audioEl.src.includes(src)) return;
 
     audioEl.src = src;
     audioEl.load();
-
     audioEl.addEventListener('loadedmetadata', () => {
       try {
         const dur = audioEl.duration || 1;
         audioEl.currentTime = resumePoint % Math.max(1, dur);
       } catch (e) {}
-
-      // Eğer önceki temada çalıyorduysa, yeni temada da devam etsin
       if (wasPlaying || sessionStorage.getItem('hades-bgm-ever-started') === '1') {
         audioEl.play().catch(() => {});
       }
     }, { once: true });
   }
 
-  // **** DEĞİŞİKLİK BURADA: applyTheme fonksiyonuna animasyon eklendi ****
-  function applyTheme(theme) {
+  // --- Core Logic (Animation Included) ---
+
+  function applyTheme(theme, animate = false) {
     const t = THEME_FILES[theme] ? theme : "1990-2010";
 
-    // 1. Ekranın o anki renginde geçici bir perde (overlay) oluştur
+    // Animasyonsuz geçiş (İlk açılış)
+    if (!animate) {
+        setThemeCss(t);
+        localStorage.setItem(KEY_THEME, t);
+        setPortrait(t);
+        setThemeBgm(t);
+        return;
+    }
+
+    // Animasyonlu geçiş (Kullanıcı değiştirdiğinde)
     const overlay = document.createElement('div');
     const currentBg = getComputedStyle(document.body).backgroundColor;
     
-    // Perdenin stilini ayarla
     Object.assign(overlay.style, {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        backgroundColor: currentBg !== 'rgba(0, 0, 0, 0)' ? currentBg : '#111', // Güvenlik için fallback renk
-        zIndex: 9999,
-        pointerEvents: 'none',
-        opacity: 0, // Başlangıçta görünmez
-        transition: 'opacity 0.4s ease' // Geçiş hızı (0.4 saniye)
+        position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
+        backgroundColor: currentBg !== 'rgba(0, 0, 0, 0)' ? currentBg : '#111',
+        zIndex: 9999, pointerEvents: 'none', opacity: 0, transition: 'opacity 0.4s ease'
     });
     document.body.appendChild(overlay);
 
-    // 2. Perdeyi yavaşça görünür yap (Fade In) -> Ekran kararır/renklenir
-    requestAnimationFrame(() => {
-        overlay.style.opacity = '1';
-    });
+    // Fade In
+    requestAnimationFrame(() => { overlay.style.opacity = '1'; });
 
-    // 3. Perde tam kapandığında (0.4 sn sonra) asıl değişikliği yap
+    // Change Content & Fade Out
     setTimeout(() => {
         setThemeCss(t);
         localStorage.setItem(KEY_THEME, t);
         setPortrait(t);
         setThemeBgm(t);
 
-        // 4. Yeni tema CSS'i yüklendikten sonra perdeyi kaldır (Fade Out)
+        // Logo artık CSS değişkeni ile otomatik değişiyor, JS müdahalesine gerek yok.
+
         setTimeout(() => {
             overlay.style.opacity = '0';
-            // Animasyon bitince DOM'dan tamamen sil
-            setTimeout(() => {
-                if(overlay.parentNode) overlay.parentNode.removeChild(overlay);
-            }, 400); 
-        }, 150); // CSS'in tarayıcı tarafından işlenmesi için minik bir gecikme
+            setTimeout(() => { if(overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 400); 
+        }, 150); 
         
-    }, 400); // Fade In süresi ile eşleşmeli
+    }, 400); 
   }
 
-  // ---------- BGM QoL: ses & zaman ----------
-
-  // Volume hatırla
+  // --- Audio Persistence ---
   const savedVol = parseFloat(localStorage.getItem(KEY_BGM_VOL) || '0.5');
-  audioEl.volume = Number.isFinite(savedVol)
-    ? Math.min(1, Math.max(0, savedVol))
-    : 0.5;
+  audioEl.volume = Number.isFinite(savedVol) ? Math.min(1, Math.max(0, savedVol)) : 0.5;
 
-  // Konum hatırla
   const savedPos = parseFloat(localStorage.getItem(KEY_BGM_POS) || '0');
   if (Number.isFinite(savedPos) && savedPos > 0) {
     audioEl.addEventListener('loadedmetadata', () => {
@@ -168,69 +150,36 @@ function themeSwitch() {
     }, { once: true });
   }
 
-  // Her 10sn'de bir currentTime kaydet
   setInterval(() => {
-    if (!audioEl.paused) {
-      localStorage.setItem(KEY_BGM_POS, String(audioEl.currentTime || 0));
-    }
-  }, 10);
+    if (!audioEl.paused) localStorage.setItem(KEY_BGM_POS, String(audioEl.currentTime || 0));
+  }, 1000); // Performans için 10ms yerine 1000ms yaptım
 
-  // Dışarıdan volume değiştirmek istersen:
-  window.hadesBgmSetVolume = (v) => {
-    const nv = Math.min(1, Math.max(0, Number(v)));
-    if (Number.isFinite(nv)) {
-      audioEl.volume = nv;
-      localStorage.setItem(KEY_BGM_VOL, String(nv));
-    }
-  };
+  // --- Init ---
+  const savedTheme = localStorage.getItem(KEY_THEME) || '1990-2010';
+  if (select) select.value = savedTheme;
+  
+  applyTheme(savedTheme, false); // Animasyonsuz başlat
 
-  // ---------- Autoplay davranışı ----------
-  // Amaç: kullanıcı bir kere başlattıysa, aynı tab içinde tüm sayfalarda durmadan çalsın.
-
+  // Autoplay
   const armAutoplay = () => {
     const everStarted = sessionStorage.getItem('hades-bgm-ever-started') === '1';
-
-    // Eğer bu sekmede daha önce başladıysa, yeni sayfada direkt dene
-    if (everStarted) {
-      audioEl.play().catch(() => {});
-      return;
-    }
-
-    // İlk sayfa / ilk giriş: bir kullanıcı etkileşimi bekleyelim
+    if (everStarted) { audioEl.play().catch(() => {}); return; }
     const firstPlay = () => {
       audioEl.play().catch(() => {});
       sessionStorage.setItem('hades-bgm-ever-started', '1');
       window.removeEventListener('pointerdown', firstPlay);
       window.removeEventListener('keydown', firstPlay);
     };
-
     window.addEventListener('pointerdown', firstPlay, { once: true });
     window.addEventListener('keydown', firstPlay, { once: true });
   };
-
-  // ---------- İlk yükleme + select değişimi ----------
-
-  // Sayfa ilk açıldığında animasyonsuz yüklemek için direkt fonksiyonları çağırabilirsin
-  // Ama "applyTheme" kullanırsan sayfa açılışında da hoş bir fade-in efekti olur.
-  const savedTheme = localStorage.getItem(KEY_THEME) || '1990-2010';
-  if (select) select.value = savedTheme;
-  
-  // İlk açılışta animasyon istemiyorsan burayı şöyle değiştirebilirsin:
-  // setThemeCss(savedTheme); localStorage.setItem(KEY_THEME, savedTheme); setPortrait(savedTheme); setThemeBgm(savedTheme);
-  // Ama mevcut haliyle bırakırsan sayfa açılırken de efekt verir:
-  setThemeCss(savedTheme); localStorage.setItem(KEY_THEME, savedTheme); setPortrait(savedTheme); setThemeBgm(savedTheme);
-
-  // Autoplay kolunu kur
   armAutoplay();
 
-  // Tema değişimi
   if (select) {
     select.addEventListener('change', (e) => {
-      const val = e.target.value;
-      applyTheme(val);
+      applyTheme(e.target.value, true); // Animasyonlu geçiş
     });
   }
 }
 
-// Sayfa yüklenince çalışsın
 themeSwitch();
