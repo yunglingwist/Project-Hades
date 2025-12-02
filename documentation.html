@@ -74,18 +74,45 @@
     <summary>Project Layout</summary>
     <div class="panel-body">
       <h3>Atakan: Home Page & Exhibition Page </h3>
-      <p>Built the homepage as the thematic entry point to the exhibiton. The layout prioritized atmosphere: time-fitting palette, groovy music, our antagonist Zagreus welcoming you into the narrative. In case a user might not the familiar to the concept of the game, brief info and embedded links to it is framed right below the narration, centered to pose as a warning. Right below is side scrolling text blocks to invite user to start exploring. Margins were widened to create breathing space and keep the content from touching the viewport edges. Responsive scaling was added so the title remains dominant regardless of device size. The homepage needed to instantly communicate theme and simplicity made that possible. </p>
-      <p>The Exhibition page was structured as the core navigation interface of the digital museum. Instead of relying on a standard menu, created a spatial layout inspired by the vertical map of the game. Markers respond on hover, revealing the item associated with each exhibition area. </p>
-      <p>Also for smoother function, turned theme-switcher into javascript.</p>
+      <p>Built the homepage as the thematic entry point to the exhibiton. 
+        The layout prioritized atmosphere: time-fitting palette, groovy music, our antagonist Zagreus introducing you into the narrative. 
+        In case a user might not the familiar to the concept of the game, brief info and embedded links to it is framed right below the narration, centered to pose as a warning.
+         Right below is side scrolling text blocks to invite user to start exploring. 
+        Margins were widened to create breathing space and keep the content from touching the viewport edges. 
+        Responsive scaling was added so the title remains dominant regardless of device size. 
+        The homepage needed to instantly communicate theme and simplicity made that possible. </p>
+      <p>The Exhibition page was structured as the core navigation interface of the digital museum. 
+        Instead of relying on a standard menu, created a spatial layout inspired by the vertical map of the game. 
+        We chose to include both in-game map and museum exhibition rooms to reinforce the connection between the two worlds wtih only a swipe motion.
+        Each exhibition room is represented as a node on the grid, positioned to mimic the in-game geography. 
+        Markers respond on hover, revealing the item associated with each exhibition area. </p>
+      <p>Also for smoother function, turned a theme-switcher into javascript. Later added to all pages located on right corner of the header for accesibility. And the page titles in the header turns into a hamburger menu for optimization through devices of all sizes.</p>
       <h3>Ceyda: Documentation Page, moodboard & stylization </h3>
       <img class="doc-img" src="images/layoutsketch.png" alt="Sketches for layout">
-      <p>Handled the documentation page, had to present text-heavy content while keeping it readable and non-static. A single-column layout was chosen for desktop screens: text on one side, visual development materials on the other (sketches, notes, iterations). For mobile, the layout collapses into a stacked sequence to maintain legibility. The goal was transparency — to show how the project was built, not only the end result.</p>
+      <p>Handled the documentation page, had to present text-heavy content while keeping it readable and non-static. 
+        A single-column layout was chosen for desktop screens: text on one side, visual development materials on the other (sketches, notes, iterations). 
+        For mobile, the layout collapses into a stacked sequence to maintain legibility. The goal was transparency — to show how the project was built, not only the end result. 
+      Placed on top of the page are three boxes containing each teammates picture and name, then three collapsible containers below containing main aspects of project development process.
+    Collapsible text is for the users that might not be intrerested in such techincal details. Also to further ease heavy content, explanation and image matching theme is embedded in the css file of each theme.
+  Simple animation is added for the viewer to notice the changes. Audio matching the theme of each era is implemented with the exception of Documentation page to avoid distraction while reading. 
+  </p>
       <img class="doc-img" src="images/figma.png" alt="Figma moodboard">
-      <p>Also built the moodboard and set global style direction. We used <a href="https://www.figma.com/design/AaZ6v9pzqjPsSAlEdAXSyS/hadesproject?node-id=0-1&t=SzaswLXy5vmjv54M-1">Figma</a>. The palette was inspired by Hades: charcoal #1a1a1a for the underworld, muted gold for accents, and a high-contrast serif font for titles to echo ancient inscriptional aesthetics. CSS variables were later introduced to unify these style decisions across contributors. This prevented color drift and ensured that page-level visuals felt cohesive even though multiple people worked separately. Created javascript files to automate features of pop-ups.</p>
+      <p>Also built the moodboards and set global style direction. We used <a href="https://www.figma.com/design/AaZ6v9pzqjPsSAlEdAXSyS/hadesproject?node-id=0-1&t=SzaswLXy5vmjv54M-1">Figma</a> to visualize our first prototype. 
+        Altough the palette was inspired by ages, we agreed to focus mostly on dark themes as the game takes place in the underworld. 
+        CSS variables were later introduced to unify these style decisions across contributors. 
+        This prevented color drift and ensured that page-level visuals felt cohesive even though multiple people worked separately.</p>
       <h3>Yigit: Map Page & Disclaimer Page</h3>
-      <p>The exhibition page required more technical layout solution. It needed to support many objects presented in repeatable format. Designed style-popup system using css: real object on the left, game item on the right, metadata inside boxes, expandable sections beneath. Flexbox was used instead of strict grid since it handles variable content better. Each card was assigned padding and maximum width constraints so images didn't stretch or pixelate at large resolutions. A challenge was balancing text volume — especially in historical & narrative descriptions — so collapsible toggles were implemented and keep the layout visually level between entries. CSS grid was used to define a multi-cell area where each exhibition room could be positioned visually rather than linearly. This approach gave full control over spacing and scale, allowing rooms to occupy varying grid spans depending on their importance or volume of displayed material. One design challenge was balancing grid density with readability — early tests left too much empty space — so the grid was expanded and room nodes scaled up to support clarity. </p>
-      <p> The intention was to simulate walking through a real museum, where you don’t see everything at once — discovery happens through movement. The hover interaction helps guide users without overwhelming them visually. </p>
-      <p>The disclaimer page required a different tone: informational rather than exploratory. A minimal, single-column layout was chosen, with consistent margins and controlled line length to keep the legal text readable without distraction. Person1 avoided heavy styling here on purpose — the page acts as a frame, not a display — reinforcing that the project interprets history through digital media rather than replacing museum authority. </p>
+      <p>The Map page required more technical layout solution. 
+        It needed to support many objects presented in repeatable format. 
+        Designed style-popup system using css: real object on the left, game item on the right, metadata inside boxes, expandable sections beneath. 
+        Flexbox was used instead of strict grid since it handles variable content better. Each box was assigned padding and maximum width constraints so images didn't stretch or overflow at large resolutions. 
+        A challenge was balancing text volume especially in historical & narrative descriptions so buttons — back/next, show more, +/- for language and content— were implemented and keep the layout visually level between entries. 
+        CSS grid was used to define a multi-cell area where each exhibition room could be positioned visually rather than linearly. Also to establish chronological timeline objects are manually places according to their historical metadata.
+        This approach eased spacing and scale, allowing room names to occupy varying grid spans depending on their importance or volume of displayed material. </p>
+      <p>The map of the museum gives access to each item. Pop-up system is used with the intention of simulating walking through a real museum, where to see everything you have to get closer. 
+        The hover interaction helps guide users visually. </p>
+      <p>The disclaimer page required a informational tone specifying our purpose and copyrights. A minimal, single-column layout was chosen, with consistent margins and controlled line length to keep the legal text readable without distraction. 
+        Avoided heavy styling here on purpose reinforcing that the project interprets history through digital media rather than replacing museum authority. </p>
     </div>
   </details>
 </section>
@@ -95,7 +122,9 @@
     <summary>Themes</summary>
     <div class="panel-body">
       <h4>!TEXT BELOW ADJUSTS TO THEME, CHANGE TO REVEAL MORE!</h4>
-      <p>Each member was assigned two chronological aesthetic eras to observe how classical mythology has been interpreted through time. The goal was to map historical continuity: how myth objects change in meaning across centuries, eventually resurfacing in modern media like Hades.</p>
+      <p>Each member was assigned two chronological aesthetic eras to observe how classical mythology has been interpreted through time. 
+        The goal was to map historical continuity: how myth objects change in meaning across centuries, eventually resurfacing in modern media like Hades. 
+        For each theme we picked a font family, 3-5 key and accent colors, created a logo, a map and the antagonist to complete the aesthetic. As priorly mentioned, only light themes are available to the match game locations.</p>
       <p class="theme-text1"></p>
       <img id="theme-image" src="projecthades/images/default.jpg" alt="moodboard">
       <p class="theme-text2"></p>
@@ -108,12 +137,12 @@
     <summary>Metadata</summary>
     <div class="panel-body">
       <p>Each team member wrote metadata entries on JSON files for 5–6 artifacts taking RSTU properties into consideration, linking museum objects to in-game equivalents. The structure for every entry included:</p>
-    <p>Historical description –material, origin, symbolism–; Game narrative –how the item transforms inside Hades–; Four writing levels –language simple/complex, content simple/complex, each divided into two for "show more" feature–</p>
-    <p>Bibliographic web references for both museum + game sources.</p>
+    <p>Historical description –material, origin, symbolism–; Game narrative –how the item transforms inside Hades–; Four writing levels –language simple/complex, content simple/complex, each divided into two for "show more" property–; 
+      Bibliographic web references for both museum + game sources.</p>
     <p>The format allowed the exhibition to communicate on multiple cognitive layers — children, casual readers, and scholars can extract meaning from the same artifact.</p>
     <h4>Atakan: Nemean Chariot, Ambrosia, Heart-seeking Bow, Infernal Trove, Vase</h4>
     <h4>Ceyda: Athena, Charon, Achilles, Stygian Blade, Shield of Chaos, Obol Coin</h4>
-    <h4>Yigit: Hades & Persephone, Cerberus, Zeus, Minotaur Statue, Ares. Created the</h4>
+    <h4>Yigit: Hades & Persephone, Cerberus, Zeus, Minotaur Statue, Ares. Created the standard for the metadata files</h4>
     <p>Each contributor developed their objects independently, then cross-reviewed tone and accuracy to keep consistency. Museum catalogues were prioritized over general internet sources to maintain academic reliability; game descriptions sourced strictly from official Hades wikis.</p>
     </div>
   </details>
