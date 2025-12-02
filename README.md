@@ -59,9 +59,3 @@ To cater to different audiences (from casual gamers to academic researchers), ev
 
 ### 🔗 Dynamic QR Generation
 * **Source Linking:** Every artifact generates an automatic QR code linking directly to the source museum (e.g., The Met, British Museum) for further research.
-
----
-
-## 🛠️ Technical Structure
-
-The project is built using pure **HTML5, CSS3, and JavaScript (ES6+)**. No heavy frameworks (React, Vue, Bootstrap) were used to ensure maximum performance and semantic code quality.
