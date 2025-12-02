@@ -317,6 +317,8 @@ body {
 .doc-img {
   max-width: 300px;   
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* 8. GAME INFO SECTION (Special Info Box) */

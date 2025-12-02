@@ -4,9 +4,9 @@
   --color-bg: #0B0F14;
   --color-text: #E6EEF8;
 
-  --color-accent: #6CF0FF;          /* primary neon accent */
-  --color-accent-border: #3CA8B6;   /* border / shadow tone */
-  --color-highlight: #9A6CFF;       /* secondary neon accent */
+  --color-accent: #6CF0FF;        
+  --color-accent-border: #3CA8B6;   
+  --color-highlight: #9A6CFF;       
   --text-muted: #A7B6C8;
 
   /* map background*/
@@ -28,5 +28,8 @@
 :root {
   #theme-image {
     content: url("../../images/moodboard6.jpg");
+     height: auto;
+     display: block;
+     margin: 0 auto;
   }
 }

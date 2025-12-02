@@ -27,5 +27,8 @@
 :root {
   #theme-image {
     content: url("../../images/moodboard4.jpg");
+     height: auto;
+     display: block;
+     margin: 0 auto;
   }
 }

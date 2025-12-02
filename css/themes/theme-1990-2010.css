@@ -1,13 +1,13 @@
 /* 1990–2010 (Frutiger Aero style) */
 :root{
-  /* functional color tokens (Frutiger Aero) */
-  --color-bg: #dffaff;            /* soft aqua background */
-  --color-text: #003b4a;          /* deep teal for high readability */
+  /* functional color tokens */
+  --color-bg: #dffaff;      
+  --color-text: #003b4a;       
 
-  --color-accent: #00c8ff;        /* bright 'aero' aqua highlight */
-  --color-accent-border: #00a4d4; /* darker aqua border */
-  --color-highlight: #1b626e;     /* light glossy hover highlight */
-  --text-muted: #4f7f88;          /* softened desaturated teal */
+  --color-accent: #00c8ff; 
+  --color-accent-border: #00a4d4;
+  --color-highlight: #1b626e;     
+  --text-muted: #4f7f88;        
 
   /* map background */
   --background-map: url('../images/Map5.jpg');
@@ -30,5 +30,8 @@
 :root {
   #theme-image {
     content: url("../../images/moodboard5.jpg");
+     height: auto;
+     display: block;
+     margin: 0 auto;
   }
 }

@@ -3,13 +3,13 @@
 
   --color-bg:#071E44;
   --color-text:#ECD0BB;
-  --color-accent:#D26E3A;       /* ana vurgu */
-  --gold-dark:#D8491D;  /* kenar/border */
+  --color-accent:#D26E3A;       
+  --gold-dark:#D8491D;  
   --text-muted:#929BAC;
   --accent:#ECD0BB;    
 
   /* map image for this theme */
-  --background-map: url('../images/Map2.jpg'); /* Koyu temaya uygun varsayılan bir harita */
+  --background-map: url('../images/Map2.jpg'); 
 
   /* typography */
   --font-text: 'Abril Fatface';
@@ -27,5 +27,8 @@
 :root {
   #theme-image {
     content: url("../../images/moodboard2.jpg");
+     height: auto;
+     display: block;
+     margin: 0 auto;
   }
 }

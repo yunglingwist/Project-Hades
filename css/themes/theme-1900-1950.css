@@ -4,9 +4,9 @@
   --color-bg: hsl(240, 42%, 18%);
   --color-text: #f8f1e7;
 
-  --color-accent: #f8f1e77f;          /* color accent*/
-  --color-accent-border: #EEB765;   /* border accent */
-  --color-highlight: #B03A2E;       /* hover accent */
+  --color-accent: #f8f1e77f;      
+  --color-accent-border: #EEB765;  
+  --color-highlight: #B03A2E;   
   --text-muted: #4A4A4A;
 
   
@@ -29,5 +29,8 @@
 :root {
   #theme-image {
     content: url("../../images/moodboard3.jpg");
+     height: auto;
+     display: block;
+     margin: 0 auto;
   }
 }

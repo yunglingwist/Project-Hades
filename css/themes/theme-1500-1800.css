@@ -3,13 +3,13 @@
 
   --color-bg:#172639;
   --color-text:#CB9323;
-  --color-accent:#D5C2A2;       /* ana vurgu */
-  --color-highlight:#926D33;  /* kenar/border */
+  --color-accent:#D5C2A2;     
+  --color-highlight:#926D33; 
   --text-muted:#926D33;
   --accent:#926D33;    
 
   /* map image for this theme */
-  --background-map: url('../images/GameMap.jpg'); /* Koyu temaya uygun varsayılan bir harita */
+  --background-map: url('../images/GameMap.jpg'); 
 
   /* typography */
   --font-text: 'Libre Caslon Text';
@@ -27,5 +27,8 @@
 :root {
   #theme-image {
     content: url("../../images/moodboard1.jpg");
+     height: auto;
+     display: block;
+     margin: 0 auto;
   }
 }
