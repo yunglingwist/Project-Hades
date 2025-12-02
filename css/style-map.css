@@ -1,164 +1,200 @@
+/* ==========================================================================
+   MAP STYLES (Grid Map & Visual Exhibition Map)
+   ========================================================================== */
+
 :root {
-    --border-radius: 8px;
+  --border-radius: 8px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-
-    background-color: var(--color-bg);
-
-    color: var(--color-bg); 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  margin: 0; padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-bg); 
+  min-height: 100vh;
+  display: flex; flex-direction: column;
 }
 
 .page-container {
-    padding-top: 50px; 
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  padding-top: 50px; 
+  flex-grow: 1;
+  display: flex; flex-direction: column;
 }
 
-/* GRID LAYOUT */
+
+/* ==========================================================================
+   1. GRID LAYOUT (used in map.html)
+   ========================================================================== */
 
 .grid-layout {
-    display: grid;
-    grid-template-columns: 300px repeat(3, 1fr); 
-    gap: 15px; 
-    max-width: 1200px;
-    width: 90%; 
-    margin: 50px auto; 
-    align-items: center; 
+  display: grid;
+  grid-template-columns: 300px repeat(3, 1fr); 
+  gap: 15px; 
+  max-width: 1200px; width: 90%; 
+  margin: 50px auto; 
+  align-items: stretch; 
 }
 
-
+/* Row Titles (Surface, Elysium, etc.) */
 .row-title {
-
-    background-color: var(--color-accent);
-    color: var(--color-bg); 
-    
-    height: 111px;
-    
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    border-radius: var(--border-radius);
-    
-    grid-column: 1 / 2; 
+  background-color: var(--color-accent);
+  color: var(--color-bg); 
+  /* Changed fixed height to min-height for flexibility */
+  min-height: 111px; height: auto;
+  font-weight: 700; text-transform: uppercase;
+  padding: 10px 15px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--border-radius);
+  grid-column: 1 / 2; 
 }
-
 
 .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    padding: 10px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; 
+  padding: 10px;
 }
-
 
 .item-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; 
+  width: 60px; height: 60px;
+  border-radius: 50%; margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex; justify-content: center; align-items: center;
+  overflow: hidden; 
+  background-color: rgba(0,0,0,0.1);
 }
-
 
 .item-icon {
-    display: block;
-    width: 100%; 
-    height: 100%;
-    object-fit: contain; 
+  display: block; width: 70%; height: 70%;
+  object-fit: contain; 
 }
 
-/* BUTTONS */
+/* Buttons */
 .item-button {
-
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    border: none;
-    padding: 8px 15px;
-    text-transform: uppercase;
-    font-weight: 400;
-    cursor: pointer;
-    border-radius: var(--border-radius);
-    width: 90%; 
-    transition: background-color 0.2s, transform 0.1s;
-    font-family: inherit;
-    font-size: 14px;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border: none; padding: 8px 15px;
+  text-transform: uppercase; font-weight: 700;
+  cursor: pointer; border-radius: var(--border-radius);
+  width: 90%; 
+  transition: background-color 0.2s, transform 0.1s;
+  font-family: inherit; font-size: 14px;
 }
 
 .item-button:hover {
-    background-color: var(--color-highlight, #f1b369); 
+  background-color: var(--color-highlight); 
+  transform: translateY(-2px);
 }
 
-/* COPYRIGHT */
-.copyright-bar {
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    text-align: center;
-    padding: 15px 0;
-    margin-top: auto; 
-    font-weight: 700;
-    width: 100%;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+
+/* ==========================================================================
+   2. VISUAL EXHIBITION MAP (used in exhibition.html)
+   ========================================================================== */
+
+/* Slider Controls */
+.view-controls {
+  display: flex; align-items: center; justify-content: center;
+  gap: 15px; margin-bottom: 20px;
+  color: var(--color-text); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
 }
 
-/* RESPONSIVE */
+#view-slider {
+  width: 200px; cursor: pointer;
+  accent-color: var(--color-accent);
+}
+
+/* Map Container */
+.map-stage {
+  padding: 16px 0 48px;
+  width: 100%; display: flex; flex-direction: column; align-items: center;
+}
+
+.map-wrap {
+  position: relative; display: block; width: 100%;
+  /* Maintain Aspect Ratio of the original map image */
+  aspect-ratio: 1280 / 2571; 
+  overflow: hidden;
+  border: 2px solid var(--color-accent-border);
+  border-radius: 8px;
+}
+
+/* Layer 1: Bottom Image Map */
+#map {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: var(--background-map);
+  background-size: cover; background-position: center;
+  z-index: 1;
+  opacity: 1; transition: opacity 0.1s linear;
+}
+
+/* Layer 2: Middle Blueprint Rooms */
+.rooms-layer {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 2; pointer-events: none;
+  opacity: 0; transition: opacity 0.1s linear;
+  background-color: var(--color-bg); /* Hides map when fully opaque */
+}
+
+/* Layer 3: Top Markers */
+#markers {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 10; pointer-events: none;
+}
+.marker { pointer-events: auto; } /* Enable clicks */
+
+/* Room Styling (Blueprint Look) */
+.room-rect {
+  position: absolute;
+  border: 2px solid var(--color-accent);
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.room-label {
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: clamp(14px, 2vw, 24px);
+  text-transform: uppercase; text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8); letter-spacing: 1px;
+}
+
+
+/* ==========================================================================
+   3. RESPONSIVE QUERIES
+   ========================================================================== */
 
 @media (max-width: 900px) {
-    .grid-layout {
-        grid-template-columns: 100px repeat(2, 1fr); 
-        width: 95%;
-        gap: 10px;
-    }
-    .row-title {
-        height: auto; 
-        grid-row: span 2; 
-    }
+  .grid-layout {
+    grid-template-columns: 150px repeat(2, 1fr); 
+    width: 95%; gap: 10px;
+  }
 }
 
 @media (max-width: 600px) {
-    .grid-layout {
-        grid-template-columns: 1fr; 
-        gap: 5px;
-        margin: 20px auto;
-    }
+  /* Switch to List View on Mobile */
+  .grid-layout {
+    display: flex; flex-direction: column;
+    gap: 10px; margin: 20px auto;
+  }
 
-    .row-title {
-        grid-column: 1 / -1; 
-        margin-top: 15px;
-        height: auto; 
-    }
-    
-    .grid-item {
-        grid-column: 1 / -1;
-        flex-direction: row; 
-    }
+  .row-title {
+    width: 100%; min-height: auto;
+    margin-top: 15px; font-size: 16px;
+  }
+  
+  .grid-item {
+    flex-direction: row; width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
 
-    .item-circle {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 0;
-        margin-right: 10px;
-    }
-    
-    .item-button {
-        width: auto;
-        flex-grow: 1; 
-        text-align: left;
-    }
-
+  .item-circle {
+    width: 40px; height: 40px;
+    margin-bottom: 0; margin-right: 15px; flex-shrink: 0;
+  }
+  
+  .item-button {
+    width: auto; flex-grow: 1; text-align: left;
+    margin: 0; padding-left: 0; background: none; color: var(--color-bg);
+  }
 }

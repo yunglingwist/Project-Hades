@@ -51,16 +51,21 @@
 </header>
 
   <main class="exhibit container">
-    <h1 class="visually-hidden">Exhibition Map</h1>
+    <div class="view-controls container">
+  <label for="view-slider">Game-Map View</label>
+  <input type="range" id="view-slider" min="0" max="1" step="0.01" value="0">
+  <label for="view-slider">Museum View</label>
+</div>
 
-    <section class="map-stage">
-      <div class="map-wrap">
-        <!-- harita temadan geliyor -->
-        <div id="map" role="img" aria-label="Hades exhibition map"></div>
-        <!-- marker’lar buraya -->
-        <div id="markers" aria-label="Exhibition hotspots"></div>
-      </div>
-    </section>
+<section class="map-stage">
+  <div class="map-wrap">
+    <div id="map" role="img"></div>
+    
+    <div id="rooms-layer" class="rooms-layer"></div>
+
+    <div id="markers"></div>
+  </div>
+</section>
   </main>
 
   <!-- popup / overlay (map’tekiyle aynı) -->
