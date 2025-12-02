@@ -802,21 +802,21 @@ const DATA_STORE = {
 };
 
 const CHRONOLOGICAL_ORDER = [
-    "chariot",
-    "bow",
-    "obol",
-    "ares",
-    "vase",
-    "trove",
-    "shield",
-    "blade",
-    "ambrosia",
-    "zeus",
-    "athena",
-    "cerberus",
-    "charon",
-    "hades",
-    "minotaur"
+  "chariot",       // 6th century BCE (2nd quarter)
+  "bow",           // 525-330 BC
+  "minotaur",      // 5th century BCE (original), Roman copy
+  "obol",          // 5th-1st century BC
+  "vase",          // ca. 340-330 BCE
+  "hades",         // Roman period (Apulian vase, ca. 340-330 BCE) - NOTE: metadata conflict
+  "trove",         // c. 320 BCE - NOTE: metadata says "ca. 312 BCE"
+  "shield",        // c. 185-160 BC
+  "blade",         // 1st century AD
+  "ambrosia",      // late 1st-early 2nd century AD
+  "ares",          // Roman period (stylistically Roman Imperial)
+  "zeus",          // 2nd century AD (Roman Imperial)
+  "athena",        // c. AD 200-250
+  "cerberus",      // 3rd-6th century AD
+  "charon"         // 1536-1541 (Renaissance fresco)
 ];
 
 // 1. GLOBAL VARIABLES AND CONSTANTS

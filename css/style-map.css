@@ -198,3 +198,34 @@ body {
     margin: 0; padding-left: 0; background: none; color: var(--color-bg);
   }
 }
+/* --- Map Intro Header --- */
+.map-intro {
+    text-align: center;
+    margin-bottom: 30px; /* Grid ile arasına mesafe */
+    padding: 0 20px;
+}
+
+.map-title {
+    font-family: var(--font-display); /* Temanın başlık fontu */
+    color: var(--color-accent);       /* Temanın vurgu rengi */
+    font-size: clamp(24px, 5vw, 36px);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Hafif gölge */
+}
+
+.map-subtitle {
+    font-family: var(--font-text);    /* Temanın yazı fontu */
+    color: var(--color-text);
+    font-size: clamp(14px, 3vw, 18px);
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto; /* Ortala */
+    line-height: 1.6;
+}
+
+.map-subtitle strong {
+    color: var(--color-highlight);    /* "Next" kelimesini parlat */
+    font-weight: 800;
+}
