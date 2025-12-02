@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="images/poster.png" alt="Project HADES Poster" width="600" style="border-radius: 10px; box-shadow: 0 0 20px rgba(212, 170, 90, 0.5);">
+  <img src="images/poster.jpg" alt="Project HADES Poster" width="600" style="border-radius: 10px; box-shadow: 0 0 20px rgba(212, 170, 90, 0.5);">
   
   <br><br>
 
