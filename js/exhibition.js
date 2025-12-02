@@ -10,7 +10,7 @@ const MARKERS = [
     { x: 46, y: 72, label: 'Tomb Trove',     clickId: 'trove',    icon:'images/IconTrove.webp'},
     { x: 63, y: 66, label: 'Ares',           clickId: 'ares',     icon:'images/IconAres.webp'},
     { x: 53, y: 61, label: 'Charon',         clickId: 'charon',   icon:'images/IconCharon.webp'},
-    { x: 40, y: 53, label: 'Vase',           clickId: 'vase',     icon:'images/ItemVase.png'}, 
+    { x: 40, y: 53, label: 'Vase',           clickId: 'vase',     icon:'images/ItemVase.webp',}, 
     { x: 65, y: 49, label: 'Obol Coin',      clickId: 'obol',     icon:'images/IconObol.webp'},
     { x: 51, y: 47, label: 'Zeus',           clickId: 'zeus',     icon:'images/IconZeus.webp'},
     { x: 65, y: 38, label: 'Greek Shield',   clickId: 'shield',   icon:'images/IconShield.webp'},
